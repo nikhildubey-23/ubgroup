@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Leadership - UB GROUP{% endblock %}
+
+{% block content %}
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Our Leadership</h1>
+            <div class="row">
+                {% for leader in leadership %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if leader.photo %}
+                        <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="card-img-top leader-img" alt="{{ leader.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ leader.name }}</h5>
+                            <p class="card-text"><strong>Position:</strong> {{ leader.position }}</p>
+                            <p class="card-text"><strong>Business:</strong> {{ leader.business }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Our Businesses - UB GROUP{% endblock %}
+
+{% block content %}
+    <section class="py-5 businesses-page">
+        <div class="container">
+            <h1 class="text-center mb-4">Our Businesses</h1>
+            <div class="row">
+                {% for business in businesses %}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        {% if business.logo %}
+                        <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ business.name }}</h5>
+                            <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
+                            <p class="card-text">{{ business.description }}</p>
+                            {% if business.address %}
+                            <p class="card-text"><strong>Address:</strong> {{ business.address }}</p>
+                            {% endif %}
+                            <p class="card-text"><strong>Contacts:</strong></p>
+                            <ul>
+                                {% for contact in business.contacts %}
+                                <li>{{ contact }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

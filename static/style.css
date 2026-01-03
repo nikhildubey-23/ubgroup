@@ -1,0 +1,245 @@
+:root {
+    --prussian-blue: #102542;
+    --vibrant-coral: #f87060;
+    --alabaster-grey: #cdd7d6;
+    --khaki-beige: #b3a394;
+    --white: #ffffff;
+}
+
+/* Custom styles for UB Group website */
+body {
+    background-color: var(--alabaster-grey);
+    color: var(--prussian-blue);
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--prussian-blue);
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--prussian-blue);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer h5 {
+    color: var(--vibrant-coral);
+}
+
+.card {
+    background-color: var(--white);
+    color: var(--prussian-blue);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .card-body strong {
+    color: var(--vibrant-coral);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.bg-primary {
+    background-color: var(--alabaster-grey) !important;
+}
+
+.text-primary {
+    color: var(--vibrant-coral) !important;
+}
+
+.btn-primary {
+    background-color: var(--vibrant-coral);
+    border-color: var(--vibrant-coral);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e05a4a;
+    border-color: #e05a4a;
+    color: var(--white);
+}
+
+.hero-section {
+    background: url('img/hotel.webp') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero-section .lead {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: var(--prussian-blue) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: var(--vibrant-coral) !important;
+}
+
+.navbar-logo {
+    height: 40px;
+    transition: height 0.3s;
+}
+
+.navbar-nav .nav-link {
+    color: var(--prussian-blue) !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--vibrant-coral) !important;
+}
+
+/* Adding some more modern touches */
+a {
+    color: var(--vibrant-coral);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e05a4a;
+    text-decoration: underline;
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .card-img-top {
+        height: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 360px;
+    }
+}
+
+.businesses-preview .card-img-top {
+    height: 265px;
+}
+
+.businesses-page .card-img-top {
+    height: 407px;
+}
+
+/* Contact Page Styles */
+.contact-page .lead {
+    color: var(--prussian-blue);
+}
+
+.contact-info {
+    background-color: var(--white);
+    color: var(--prussian-blue);
+}
+
+.contact-info .fas {
+    color: var(--vibrant-coral);
+}
+
+.contact-info a {
+    color: var(--prussian-blue);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--vibrant-coral);
+    text-decoration: underline;
+}
+
+.contact-page .form-control {
+    border-radius: 10px;
+    border: 1px solid var(--alabaster-grey);
+}
+
+.contact-page .form-control:focus {
+    border-color: var(--vibrant-coral);
+    box-shadow: 0 0 0 0.25rem rgba(248, 112, 96, 0.25);
+}
+
+.contact-page .bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.business-contact-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.business-contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.business-contact-card .list-unstyled li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}

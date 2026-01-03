@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home - UB GROUP{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="display-4">{{ group_info.name }}</h1>
+                    <p class="lead">{{ group_info.tagline }}</p>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Businesses Preview -->
+    <section class="py-5 businesses-preview">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Businesses</h2>
+            <div class="row">
+                {% for business in businesses[:3] %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if business.logo %}
+                        <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ business.name }}</h5>
+                            <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
+                            <p class="card-text">{{ business.description[:100] }}...</p>
+                            <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">View All Businesses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Preview -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Leadership</h2>
+            <div class="row">
+                {% for leader in leadership[:4] %}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        {% if leader.photo %}
+                        <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="card-img-top" alt="{{ leader.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ leader.name }}</h5>
+                            <p class="card-text"><strong>Position:</strong> {{ leader.position }}</p>
+                            <p class="card-text"><strong>Business:</strong> {{ leader.business }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <a href="{{ url_for('leadership_page') }}" class="btn btn-primary">View All Leaders</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
