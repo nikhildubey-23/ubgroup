@@ -51,7 +51,7 @@
             <h2 class="text-center mb-4">Leadership</h2>
             <div class="row">
                 {% for leader in leadership[:4] %}
-                <div class="col-md-3 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="card h-100">
                         {% if leader.photo %}
                         <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="card-img-top" alt="{{ leader.name }}">
