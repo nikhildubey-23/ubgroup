@@ -179,6 +179,9 @@ a:hover {
     .card-img-top {
         height: 360px;
     }
+    .businesses-page .card-img-top {
+        height: 266px;
+    }
 }
 
 .businesses-preview .card-img-top {
