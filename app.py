@@ -60,7 +60,7 @@ leadership = [
     {'name': 'RAHUL UBHRANI', 'position': 'MD', 'business': 'UB World', 'photo': 'rahul_sir_logo.jpg'},
     {'name': 'ABHINAV UBHRANI', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'abhinav_sir.jpg'},
     {'name': 'KARAN UBHRANI', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'karan.jpg'},
-    {'name': 'MANISH UBHRANI', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': None},
+    {'name': 'MANISH UBHRANI', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': 'mahish.jpg'},
     {'name': 'MOHIT UBHRANI', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': None},
     {'name': 'SAINA UBHRANI', 'position': 'MD', 'business': 'Chocolate Kids School', 'photo': None}
 ]
