@@ -49,7 +49,6 @@ footer h5 {
 
 .card-img-top {
     width: 100%;
-    height: 460px;
     
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -116,6 +115,22 @@ footer h5 {
     font-size: 1.5rem;
 }
 
+.hero-section .lead-intro {
+    color: var(--alabaster-grey);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.welcome-section {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+
+.welcome-section .lead {
+    font-size: 1.1rem;
+    color: var(--prussian-blue);
+}
+
 .navbar {
     background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -158,14 +173,10 @@ a:hover {
     text-decoration: underline;
 }
 
-.container {
-    margin-top: 2rem;
-}
-
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .card-img-top {
-        height: 360px;
+        
     }
 }
 
@@ -177,7 +188,7 @@ a:hover {
 
 @media (max-width: 576px) {
     .card-img-top {
-        height: 360px;
+        
     }
 }
 
@@ -242,4 +253,275 @@ a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+}
+
+/* Leadership Preview Section */
+.leadership-preview .leader-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.leadership-preview .leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.leadership-preview .leader-photo-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border: 5px solid var(--vibrant-coral);
+}
+
+.leadership-preview .leader-photo {
+    width: 100%;
+    height: 142%;
+    object-fit: cover;
+}
+
+.leadership-preview .leader-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--prussian-blue);
+    margin-bottom: 5px;
+}
+
+.leadership-preview .leader-position {
+    font-size: 1rem;
+    color: var(--vibrant-coral);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.leadership-preview .leader-business {
+    font-size: 0.9rem;
+    color: var(--khaki-beige);
+}
+
+/* About Page Styles */
+.about-hero {
+    background-color: var(--prussian-blue);
+    padding: 60px 0;
+}
+
+.about-hero h1,
+.about-hero .lead {
+    color: var(--white);
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+.text-primary {
+    color: var(--vibrant-coral) !important;
+}
+
+.card-title {
+    color: var(--prussian-blue);
+}
+
+/* Businesses Page Styles */
+.businesses-hero {
+    background: url('img/school_img.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+}
+
+.businesses-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.businesses-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.businesses-hero h1,
+.businesses-hero .lead {
+    color: var(--white);
+}
+
+.business-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.business-card .img-fluid {
+    height: 100%;
+    object-fit: cover;
+}
+
+.business-card .card-body {
+    padding: 30px;
+}
+
+.business-card .card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--prussian-blue);
+}
+
+.business-card .card-text small {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--vibrant-coral);
+}
+
+.business-card .list-unstyled li {
+    color: var(--prussian-blue);
+}
+
+/* Leadership Page Styles */
+.leadership-hero {
+    background: url('img/ubworld.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+}
+
+.leadership-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.leadership-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.leadership-hero h1,
+.leadership-hero .lead {
+    color: var(--white);
+}
+
+.leader-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--alabaster-grey);
+}
+
+/* Leadership List Styles */
+.leader-list-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-list-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.leader-list-photo-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    border: 5px solid var(--vibrant-coral);
+}
+
+.leader-list-photo {
+    width: 100%;
+    height: 141%;
+    object-fit: cover;
+}
+
+.leader-list-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--alabaster-grey);
+}
+
+.leader-list-info .leader-name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.leader-list-info .leader-position {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.leader-list-info .leader-business {
+    font-size: 1rem;
+}
+
+.leader-list-info .leader-bio {
+    font-size: 1rem;
+    color: var(--prussian-blue);
+    margin-top: 15px;
+}
+
+/* Independent Leader Styles */
+.leader-list-card.ashish-ubhrani .leader-list-photo-wrapper {
+    border-color: #3a86ff; /* A vibrant blue */
+}
+
+.leader-list-card.rahul-ubhrani .leader-list-photo-wrapper {
+    border-color: #ff006e; /* A bright pink */
+}
+
+.leader-list-card.abhinav-ubhrani .leader-list-photo-wrapper {
+    border-color: #fb5607; /* An energetic orange */
+}
+
+.leader-list-card.karan-ubhrani .leader-list-photo-wrapper {
+    border-color: #8338ec; /* A strong purple */
+}
+
+.leader-list-card.manish-ubhrani .leader-list-photo-wrapper {
+    border-color: #00f5d4; /* A fresh teal */
+}
+
+.leader-list-card.mohit-ubhrani .leader-list-photo-wrapper {
+    border-color: #ffbe0b; /* A warm yellow */
+}
+
+.leader-list-card.mohit-ubhrani .leader-list-photo-placeholder .fa-user {
+    color: #ffbe0b !important;
+}
+
+.leader-list-card.saina-ubhrani .leader-list-photo-wrapper {
+    border-color: #9b5de5; /* A softer purple */
 }

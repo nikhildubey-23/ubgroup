@@ -3,25 +3,35 @@
 {% block title %}Our Businesses - UB GROUP{% endblock %}
 
 {% block content %}
-    <section class="py-5 businesses-page">
+    <!-- Businesses Hero Section -->
+    <section class="businesses-hero text-center text-white">
+        <div class="container animate-on-scroll">
+            <h1 class="display-4">Our Businesses</h1>
+            <p class="lead">Exploring the diverse ventures of UB Group.</p>
+        </div>
+    </section>
+
+    <!-- Business Listings Section -->
+    <section class="py-5">
         <div class="container">
-            <h1 class="text-center mb-4">Our Businesses</h1>
-            <div class="row">
-                {% for business in businesses %}
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
+            {% for business in businesses %}
+            <div class="business-card mb-5 animate-on-scroll">
+                <div class="row g-0">
+                    <div class="col-lg-5 {% if loop.index0 is odd %}order-lg-2{% endif %}">
                         {% if business.logo %}
-                        <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
+                        <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="img-fluid rounded-start" alt="{{ business.name }} Logo">
                         {% endif %}
+                    </div>
+                    <div class="col-lg-7 {% if loop.index0 is odd %}order-lg-1 text-lg-end{% endif %}">
                         <div class="card-body">
-                            <h5 class="card-title">{{ business.name }}</h5>
-                            <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
+                            <h2 class="card-title">{{ business.name }}</h2>
+                            <p class="card-text"><small class="text-muted">{{ business.sector }}</small></p>
                             <p class="card-text">{{ business.description }}</p>
                             {% if business.address %}
-                            <p class="card-text"><strong>Address:</strong> {{ business.address }}</p>
+                            <p class="card-text"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> {{ business.address }}</p>
                             {% endif %}
-                            <p class="card-text"><strong>Contacts:</strong></p>
-                            <ul>
+                            <p class="card-text"><strong><i class="fas fa-phone"></i> Contacts:</strong></p>
+                            <ul class="list-unstyled">
                                 {% for contact in business.contacts %}
                                 <li>{{ contact }}</li>
                                 {% endfor %}
@@ -29,8 +39,8 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </section>
 {% endblock %}

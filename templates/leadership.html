@@ -3,25 +3,42 @@
 {% block title %}Leadership - UB GROUP{% endblock %}
 
 {% block content %}
+    <!-- Leadership Hero Section -->
+    <section class="leadership-hero text-center text-white">
+        <div class="container animate-on-scroll">
+            <h1 class="display-4">Our Leadership</h1>
+            <p class="lead">Meet the team driving our success.</p>
+        </div>
+    </section>
+
+    <!-- Leadership List Section -->
     <section class="py-5">
         <div class="container">
-            <h1 class="text-center mb-4">Our Leadership</h1>
-            <div class="row">
-                {% for leader in leadership %}
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
+            {% for leader in leadership %}
+            <div class="leader-list-card mb-4 animate-on-scroll {{ leader.css_class }}">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center {% if loop.index0 is odd %}order-md-2{% endif %}">
+                        <div class="leader-list-photo-wrapper">
                         {% if leader.photo %}
-                        <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="card-img-top leader-img" alt="{{ leader.name }}">
+                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }}">
+                        {% else %}
+                            <div class="leader-list-photo-placeholder">
+                                <i class="fas fa-user fa-4x text-muted"></i>
+                            </div>
                         {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ leader.name }}</h5>
-                            <p class="card-text"><strong>Position:</strong> {{ leader.position }}</p>
-                            <p class="card-text"><strong>Business:</strong> {{ leader.business }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 {% if loop.index0 is odd %}order-md-1 text-md-end{% endif %}">
+                        <div class="leader-list-info">
+                            <h2 class="leader-name">{{ leader.name }}</h2>
+                            <p class="leader-position text-primary">{{ leader.position }}</p>
+                            <p class="leader-business text-muted">{{ leader.business }}</p>
+                            <p class="leader-bio">{{ leader.bio }}</p>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </section>
 {% endblock %}
