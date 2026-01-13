@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -69,9 +70,17 @@ leadership = [
     {'name': 'Abhinav Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'abhinav_sir.jpg', 'bio': 'Abhinav Ubhrani oversees Hotel Red Diamond, ensuring a premium hospitality experience that combines elegance, comfort, and exceptional service for all guests.', 'css_class': 'abhinav-ubhrani'},
     {'name': 'Karan Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'karan.jpg', 'bio': 'Karan Ubhrani plays a key role in managing Hotel Red Diamond, focusing on operational excellence and maintaining a welcoming atmosphere for travelers.', 'css_class': 'karan-ubhrani'},
     {'name': 'Manish Ubhrani', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': 'mahish.jpg', 'bio': 'Manish Ubhrani leads the Red Diamond Sports Center, promoting a culture of fitness and well-being by providing state-of-the-art facilities for sports enthusiasts.', 'css_class': 'manish-ubhrani'},
-    {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': None, 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubhrani'},
+    {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': None, 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubrani'},
     {'name': 'Saina Ubhrani', 'position': 'MD', 'business': 'Chocolate Kids School', 'photo': 'saina.jpg', 'bio': 'Saina Ubhrani heads Chocolate Kids School, where she is committed to fostering a joyful and nurturing learning environment for early education.', 'css_class': 'saina-ubhrani'}
 ]
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(os.path.join(app.root_path, ''), 'sitemap.xml')
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory(os.path.join(app.root_path, ''), 'robots.txt')
 
 @app.route('/')
 def home():
