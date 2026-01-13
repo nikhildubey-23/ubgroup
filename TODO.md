@@ -10,3 +10,5 @@
 - [x] Update app.py with routes for new pages.
 - [x] Update navigation in base.html for multiple pages.
 - [x] Test the updated website.
+
+**All tasks have been completed.**
