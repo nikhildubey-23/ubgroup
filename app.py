@@ -19,7 +19,8 @@ businesses = [
         'description': 'UB World is a modern real estate venture focused on creating thoughtfully designed residential spaces. Built around comfort, quality, and community living, UB World aims to offer homes that balance lifestyle, convenience, and long-term value.',
         'logo': 'ubworld.jpeg',
         'address': 'Opp. Hotel Red Diamond, Bram Baba Road, Bilaspur, Chhattisgarh, India',
-        'contacts': ['+91 95750 15001', '+91 96176 05544']
+        'contacts': ['+91 95750 15001', '+91 96176 05544'],
+        'website': 'https://www.ubworld.co.in/'
     },
     {
         'name': 'Hotel Red Diamond',
@@ -27,7 +28,8 @@ businesses = [
         'description': 'Hotel Red Diamond is a premium hospitality destination offering comfort, elegance, and warm service. Designed for both business and leisure travelers, the hotel delivers a refined stay experience with modern amenities and a welcoming atmosphere.',
         'logo': 'red_diamond_hotel_logo.png',
         'address': 'Old Power House, Road, Torwa, Bilaspur, Chhattisgarh 495004',
-        'contacts': ['+91 98279 00051']
+        'contacts': ['+91 98279 00051'],
+        'website': 'https://www.hotelreddiamond.com/'
     },
     {
         'name': 'Red Diamond Sports Center',
@@ -35,7 +37,8 @@ businesses = [
         'description': 'Red Diamond Sports Center is a dedicated space for fitness, sports, and active living. With well-equipped facilities and a focus on overall well-being, it encourages a healthy lifestyle for individuals, families, and sports enthusiasts.',
         'logo': 'red_diamond_sport_center_logo.jpg',
         'address': 'Opposite Hotel Red Diamond, Old Power House, Road, Torwa, Bilaspur, Chhattisgarh 495004',
-        'contacts': ['+91 98279 00051']
+        'contacts': ['+91 98279 00051'],
+        'website': ''
     },
     {
         'name': 'Rising Star Turf',
@@ -43,7 +46,8 @@ businesses = [
         'description': 'Rising Star Turf is a professional cricket turf developed for players of all levels. Built to support training, practice matches, and competitive play, it provides a high-quality sporting environment for cricket lovers and aspiring athletes.',
         'logo': 'rising_star.jpg',
         'address': 'Gurunanak Chowk, near Life Care Hospital, Torwa, Bilaspur, Chhattisgarh 495004',
-        'contacts': ['+91 98279 00051']
+        'contacts': ['+91 98279 00051'],
+        'website': ''
     },
     {
         'name': 'Chocolate Kids School',
@@ -51,7 +55,8 @@ businesses = [
         'description': 'Chocolate Kids School is an early education institution focused on nurturing young minds in a safe and joyful environment. With a balance of learning and play, the school emphasizes creativity, values, and strong foundational development.',
         'logo': 'school_img.jpg',
         'address': 'Jagmal Chowk, opposite Yamaha Showroom, Torwa, Bilaspur, Chhattisgarh 495004',
-        'contacts': ['+91 98279 00051']
+        'contacts': ['+91 98279 00051'],
+        'website': ''
     },
     {
         'name': 'UB Farms',
@@ -59,7 +64,8 @@ businesses = [
         'description': 'UB Farms is a modern agricultural venture focused on sustainable farming practices and high-quality crop production. Committed to innovation in agriculture, UB Farms aims to contribute to food security while promoting environmentally responsible farming methods.',
         'logo': 'ubfarmslogo.jpeg',
         'address': 'Bilaspur, Chhattisgarh, India',
-        'contacts': ['+91 98279 00051']
+        'contacts': ['+91 98279 00051'],
+        'website': ''
     },
     {
         'name': 'UB Group of Companies',
@@ -67,7 +73,8 @@ businesses = [
         'description': 'UB Group of Companies is a diversified business conglomerate with interests in real estate, hospitality, sports, and education. With a commitment to quality and innovation, we aim to bring dreams together under one roof.',
         'logo': 'ubgrouplogo.jpeg',
         'address': 'Opp. Hotel Red Diamond, Bram Baba Road, Bilaspur, Chhattisgarh, India',
-        'contacts': ['+91 95750 15001', '+91 96176 05544', '+91 98279 00051']
+        'contacts': ['+91 95750 15001', '+91 96176 05544', '+91 98279 00051'],
+        'website': ''
     }
 ]
 

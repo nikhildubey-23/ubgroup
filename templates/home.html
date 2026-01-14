@@ -36,7 +36,9 @@
         <div class="container">
             <div class="animate-on-scroll">
                 <h2 class="mb-4">Welcome to UB Group</h2>
-                <p class="lead">We are a diversified conglomerate dedicated to driving growth and innovation across various sectors. Our commitment to quality and integrity has been the cornerstone of our success. At UB Group, we believe in building a legacy of trust and excellence, making a positive impact on society and the industries we operate in. Explore our journey and discover how we are shaping the future.</p>
+                <p class="lead">
+                    At UB Group, we believe in serving our city with trust and integrity, delivering services that balance luxury with value. Explore our journey and see how we are contributing to a better future for our community.We are a city-driven service provider focused on enhancing everyday living through reliable and innovative solutions. Our commitment to quality, affordability, and excellence has been the foundation of our growth.
+                </p>
             </div>
         </div>
     </section>
@@ -66,6 +68,11 @@
                             <h5 class="card-title">{{ business.name }}</h5>
                             <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
                             <p class="card-text">{{ business.description[:100] }}...</p>
+                            {% if business.name == 'UB World' %}
+                            <a href="https://www.ubworld.co.in/" target="_blank" class="btn btn-outline-primary btn-sm mb-2">Visit Website</a>
+                            {% elif business.name == 'Hotel Red Diamond' %}
+                            <a href="https://www.hotelreddiamond.com/" target="_blank" class="btn btn-outline-primary btn-sm mb-2">Visit Website</a>
+                            {% endif %}
                             <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>

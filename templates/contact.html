@@ -114,41 +114,21 @@
             <div class="col-12 text-center">
                 <h2 class="mb-4">Our Businesses</h2>
             </div>
+            {% for business in businesses %}
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 shadow-sm business-contact-card">
                     <div class="card-body">
-                        <h5 class="card-title">UB Group of Companies</h5>
+                        <h5 class="card-title">{{ business.name }}</h5>
                         <p class="card-text"><strong>Contacts:</strong></p>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>+91 95750 15001</li>
-                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>+91 96176 05544</li>
-                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>+91 98279 00051</li>
+                            {% for contact in business.contacts %}
+                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>{{ contact }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm business-contact-card">
-                    <div class="card-body">
-                        <h5 class="card-title">UB World</h5>
-                        <p class="card-text"><strong>Contacts:</strong></p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>+91 95750 15001</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm business-contact-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Red Diamond Hotel</h5>
-                        <p class="card-text"><strong>Contacts:</strong></p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-phone-alt me-2 text-primary"></i>+91 98279 00051</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

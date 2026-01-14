@@ -47,6 +47,10 @@
                                 <li>{{ contact }}</li>
                                 {% endfor %}
                             </ul>
+                            {% if business.website %}
+                            <p class="card-text mt-3"><strong><i class="fas fa-globe"></i> Website:</strong></p>
+                            <a href="{{ business.website }}" target="_blank" class="btn btn-outline-primary btn-sm">Visit Website</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
