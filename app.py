@@ -7,8 +7,8 @@ app = Flask(__name__)
 group_info = {
     'name': 'UB GROUP',
     'tagline': 'BRINGING DREAMS TOGETHER UNDER ONE ROOF',
-    'overview': '"UB Group is a diverse organization bringing together multiple ventures under one umbrella. From UB World\'s residential spaces to hospitality at Hotel Red Diamond, and educational initiatives like Chocolate Kidz School, we aim to create a comprehensive community experience. Each project reflects our commitment to quality, comfort, and innovation, all under the UB Group name."',
-    'about_us': '"At UB Group, we believe in creating a holistic community experience by uniting a variety of ventures under one roof. Our portfolio spans residential living with UB World, top-tier hospitality at Hotel Red Diamond, quality education through Chocolate Kids School, and vibrant lifestyle amenities like the Red Diamond Sports Center. Each of our projects reflects our commitment to quality, comfort, and innovation, all designed to enrich the lives of our customers and community. We take pride in being a trusted name that brings dreams together under one roof."'
+    'overview': '"UB Group is a diverse organization bringing together multiple ventures under one umbrella. From UB World\'s residential spaces to hospitality at Hotel Red Diamond, educational initiatives like Chocolate Kidz School, and agricultural ventures through UB Farms, we aim to create a comprehensive community experience. Each project reflects our commitment to quality, comfort, and innovation, all under the UB Group name."',
+    'about_us': '"At UB Group, we believe in creating a holistic community experience by uniting a variety of ventures under one roof. Our portfolio spans residential living with UB World, top-tier hospitality at Hotel Red Diamond, quality education through Chocolate Kids School, vibrant lifestyle amenities like the Red Diamond Sports Center, and sustainable agriculture through UB Farms. Each of our projects reflects our commitment to quality, comfort, and innovation, all designed to enrich the lives of our customers and community. We take pride in being a trusted name that brings dreams together under one roof."'
 }
 
 # Businesses data
@@ -54,6 +54,14 @@ businesses = [
         'contacts': ['+91 98279 00051']
     },
     {
+        'name': 'UB Farms',
+        'sector': 'Agriculture',
+        'description': 'UB Farms is a modern agricultural venture focused on sustainable farming practices and high-quality crop production. Committed to innovation in agriculture, UB Farms aims to contribute to food security while promoting environmentally responsible farming methods.',
+        'logo': 'ubfarmslogo.jpeg',
+        'address': 'Bilaspur, Chhattisgarh, India',
+        'contacts': ['+91 98279 00051']
+    },
+    {
         'name': 'UB Group of Companies',
         'sector': 'Conglomerate',
         'description': 'UB Group of Companies is a diversified business conglomerate with interests in real estate, hospitality, sports, and education. With a commitment to quality and innovation, we aim to bring dreams together under one roof.',
@@ -70,7 +78,7 @@ leadership = [
     {'name': 'Rahul Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'rahul_sir_logo.jpg', 'bio': 'Rahul Ubhrani is dedicated to executing the vision of UB World, focusing on delivering homes that offer a perfect balance of lifestyle and long-term value.', 'css_class': 'rahul-ubhrani'},
     {'name': 'Abhinav Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'abhinav_sir.jpg', 'bio': 'Abhinav Ubhrani oversees Hotel Red Diamond, ensuring a premium hospitality experience that combines elegance, comfort, and exceptional service for all guests.', 'css_class': 'abhinav-ubhrani'},
     {'name': 'Ashish Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'ashishsir.jpeg', 'bio': 'With a strategic vision for modern living, Ashish Ubhrani leads UB World in creating residential spaces that blend comfort, quality, and community.', 'css_class': 'ashish-ubhrani'},
-    {'name': 'Karan Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'karan.jpg', 'bio': 'Karan Ubhrani plays a key role in managing Hotel Red Diamond, focusing on operational excellence and maintaining a welcoming atmosphere for travelers.', 'css_class': 'karan-ubhrani'},
+    {'name': 'Karan Ubhrani', 'position': 'MD', 'business': 'UB Farms', 'photo': 'karan.jpg', 'bio': 'Karan Ubhrani leads UB Farms, focusing on sustainable agricultural practices and modern farming techniques to ensure high-quality crop production and environmental responsibility.', 'css_class': 'karan-ubhrani'},
     {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': 'mohit.jpeg', 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubrani'}
 ]
 
