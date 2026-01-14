@@ -146,8 +146,9 @@ footer h5 {
 }
 
 .navbar-logo {
-    height: 40px;
+    height: 28px;
     transition: height 0.3s;
+    margin-bottom: 6px;
 }
 
 .navbar-nav .nav-link {
