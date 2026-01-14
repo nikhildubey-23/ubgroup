@@ -16,6 +16,9 @@
 {% block content %}
     <!-- Hero Section -->
     <section class="hero-section text-center text-white">
+        <div id="heroBackground" class="hero-background" data-images='["img/hotel.webp", "img/choclateschool.jpg", "img/RedDiamondSportsCenter.jpg", "img/RisingStarTurf.jpg", "img/ubfarms.jpg"]'>
+            <div class="hero-bg-image" style="background-image: url('{{ url_for('static', filename='img/hotel.webp') }}');"></div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-on-scroll">
