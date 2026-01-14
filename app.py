@@ -117,5 +117,13 @@ def leadership_page():
 def contact():
     return render_template('contact.html', group_info=group_info, businesses=businesses)
 
+@app.route('/red-diamond-showcase')
+def red_diamond_showcase():
+    return render_template('red_diamond_showcase.html', group_info=group_info)
+
+@app.route('/ub-world-showcase')
+def ub_world_showcase():
+    return render_template('ub_world_showcase.html', group_info=group_info)
+
 if __name__ == '__main__':
     app.run(debug=True)

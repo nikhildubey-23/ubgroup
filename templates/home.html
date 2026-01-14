@@ -63,7 +63,7 @@
             <div class="row">
                 {% for business in businesses[:3] %}
                 <div class="col-md-4 mb-4 animate-on-scroll">
-                    <div class="card h-100">
+                    <div class="card h-100 {% if business.name == 'Hotel Red Diamond' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_showcase') }}'"{% elif business.name == 'UB World' %}clickable-card" onclick="window.location.href='{{ url_for('ub_world_showcase') }}'"{% else %}"{% endif %}>
                         {% if business.logo %}
                         <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
                         {% endif %}
@@ -121,4 +121,19 @@
             </div>
         </div>
     </section>
+
+<style>
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+}
+
+.clickable-card:active {
+    transform: translateY(-2px);
+}
+</style>
 {% endblock %}
