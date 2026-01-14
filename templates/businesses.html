@@ -36,7 +36,7 @@
                     <div class="col-lg-7 {% if loop.index0 is odd %}order-lg-1 text-lg-end{% endif %}">
                         <div class="card-body">
                             <h2 class="card-title">{{ business.name }}</h2>
-                            <p class="card-text"><small class="text-muted">{{ business.sector }}</small></p>
+                            <p class="card-text"><small>{{ business.sector }}</small></p>
                             <p class="card-text">{{ business.description }}</p>
                             {% if business.address %}
                             <p class="card-text"><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> {{ business.address }}</p>

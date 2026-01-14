@@ -1,27 +1,32 @@
 :root {
-    --prussian-blue: #102542;
-    --vibrant-coral: #f87060;
+    --prussian-blue: #1a2332;
+    --vibrant-coral: #d4a574;
     --alabaster-grey: #cdd7d6;
     --khaki-beige: #b3a394;
     --white: #ffffff;
+    --dark-bg: #0d1117;
+    --dark-surface: #161b22;
+    --dark-surface-light: #21262d;
+    --dark-text: #f0f6fc;
+    --dark-text-secondary: #8b949e;
 }
 
 /* Custom styles for UB Group website */
 body {
-    background-color: var(--alabaster-grey);
-    color: var(--prussian-blue);
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
     font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--prussian-blue);
+    color: var(--dark-text);
     font-family: 'Merriweather', serif;
     font-weight: 600;
 }
 
 /* Modern Footer Styles */
 .modern-footer {
-    background: linear-gradient(135deg, #102542 0%, #1a3a5c 50%, #0f1e33 100%);
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 50%, #1a2332 100%);
     color: var(--white);
     margin-top: 2rem;
     position: relative;
@@ -35,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--vibrant-coral), #ff6b6b, var(--vibrant-coral));
+    background: linear-gradient(90deg, var(--vibrant-coral), #c9975d, var(--vibrant-coral));
     animation: shimmer 3s ease-in-out infinite;
 }
 
@@ -206,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-subscribe:hover {
-    background: #ff6b6b;
+    background: #c9975d;
     transform: translateY(-2px);
 }
 
@@ -218,13 +223,13 @@ h1, h2, h3, h4, h5, h6 {
 .social-link {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 16px;
@@ -310,16 +315,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    background-color: var(--white);
-    color: var(--prussian-blue);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
 .card .card-body strong {
@@ -334,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-primary {
-    background-color: var(--alabaster-grey) !important;
+    background-color: var(--dark-surface) !important;
 }
 
 .text-primary {
@@ -345,16 +351,19 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--vibrant-coral);
     border-color: var(--vibrant-coral);
     color: var(--white);
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 10px 25px;
-    font-weight: bold;
-    transition: background-color 0.3s, border-color 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(212, 165, 116, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: #e05a4a;
-    border-color: #e05a4a;
+    background-color: #c9975d;
+    border-color: #c9975d;
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 165, 116, 0.3);
 }
 
 .hero-section {
@@ -382,10 +391,29 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 3;
 }
 
-.hero-section h1 {
+.hero-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.hero-logo {
+    height: 80px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
+}
+
+.hero-group-text {
     color: var(--white);
     font-size: 4rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .hero-section .lead {
@@ -400,22 +428,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .welcome-section {
-    background-color: var(--white);
+    background-color: var(--dark-surface);
     padding: 60px 0;
 }
 
 .welcome-section .lead {
     font-size: 1.1rem;
-    color: var(--prussian-blue);
+    color: var(--dark-text-secondary);
 }
 
 .navbar {
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--dark-surface);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 1px solid var(--dark-surface-light);
 }
 
 .navbar-brand {
-    color: var(--prussian-blue) !important;
+    color: var(--dark-text) !important;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -431,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav .nav-link {
-    color: var(--prussian-blue) !important;
+    color: var(--dark-text) !important;
     margin: 0 10px;
     font-weight: 500;
     transition: color 0.3s;
@@ -450,6 +479,32 @@ a {
 a:hover {
     color: #e05a4a;
     text-decoration: underline;
+}
+
+/* Hero Logo Responsive Styles */
+@media (max-width: 768px) {
+    .hero-logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-logo {
+        height: 60px;
+    }
+    
+    .hero-group-text {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-logo {
+        height: 50px;
+    }
+    
+    .hero-group-text {
+        font-size: 2.5rem;
+    }
 }
 
 /* Responsive adjustments */
@@ -481,12 +536,12 @@ a:hover {
 
 /* Contact Page Styles */
 .contact-page .lead {
-    color: var(--prussian-blue);
+    color: var(--dark-text);
 }
 
 .contact-info {
-    background-color: var(--white);
-    color: var(--prussian-blue);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
 }
 
 .contact-info .fas {
@@ -494,7 +549,7 @@ a:hover {
 }
 
 .contact-info a {
-    color: var(--prussian-blue);
+    color: var(--dark-text);
     text-decoration: none;
 }
 
@@ -505,22 +560,26 @@ a:hover {
 
 .contact-page .form-control {
     border-radius: 10px;
-    border: 1px solid var(--alabaster-grey);
+    border: 1px solid var(--dark-surface-light);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
 }
 
 .contact-page .form-control:focus {
     border-color: var(--vibrant-coral);
     box-shadow: 0 0 0 0.25rem rgba(248, 112, 96, 0.25);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
 }
 
-.contact-page .bg-light {
-    background-color: #f8f9fa!important;
-}
+
 
 .business-contact-card {
-    background-color: var(--white);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.2s;
 }
 
@@ -536,10 +595,12 @@ a:hover {
 
 /* Leadership Preview Section */
 .leadership-preview .leader-card {
-    background-color: var(--white);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
     border-radius: 15px;
     padding: 30px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
@@ -570,13 +631,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--alabaster-grey);
+    background-color: var(--dark-surface-light);
 }
 
 .leadership-preview .leader-name {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--prussian-blue);
+    color: var(--dark-text);
     margin-bottom: 5px;
 }
 
@@ -589,7 +650,7 @@ a:hover {
 
 .leadership-preview .leader-business {
     font-size: 0.9rem;
-    color: var(--khaki-beige);
+    color: var(--dark-text-secondary);
 }
 
 /* Leadership Carousel Styles */
@@ -643,7 +704,7 @@ a:hover {
 }
 
 .bg-light {
-    background-color: #f8f9fa !important;
+    background-color: var(--dark-surface-light) !important;
 }
 
 .fa-3x {
@@ -655,7 +716,7 @@ a:hover {
 }
 
 .card-title {
-    color: var(--prussian-blue);
+    color: var(--dark-text);
 }
 
 /* Businesses Page Styles */
@@ -678,9 +739,11 @@ a:hover {
 }
 
 .business-card {
-    background-color: var(--white);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -702,7 +765,7 @@ a:hover {
 .business-card .card-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--prussian-blue);
+    color: var(--dark-text);
 }
 
 .business-card .card-text small {
@@ -712,7 +775,7 @@ a:hover {
 }
 
 .business-card .list-unstyled li {
-    color: var(--prussian-blue);
+    color: var(--dark-text);
 }
 
 /* Leadership Page Styles */
@@ -740,15 +803,17 @@ a:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: var(--alabaster-grey);
+    background-color: var(--dark-surface-light);
 }
 
 /* Leadership List Styles */
 .leader-list-card {
-    background-color: var(--white);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -778,7 +843,7 @@ a:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: var(--alabaster-grey);
+    background-color: var(--dark-surface-light);
 }
 
 .leader-list-info .leader-name {
@@ -798,7 +863,7 @@ a:hover {
 
 .leader-list-info .leader-bio {
     font-size: 1rem;
-    color: var(--prussian-blue);
+    color: var(--dark-text-secondary);
     margin-top: 15px;
 }
 
@@ -983,6 +1048,145 @@ a:hover {
     }
 
     
+
+/* Dark Theme Form Styles */
+.form-control {
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
+}
+
+.form-control:focus {
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border-color: var(--vibrant-coral);
+    box-shadow: 0 0 0 0.25rem rgba(248, 112, 96, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--dark-text-secondary);
+}
+
+/* Dark Theme Table Styles */
+.table {
+    color: var(--dark-text);
+}
+
+.table-dark {
+    --bs-table-bg: var(--dark-surface-light);
+    --bs-table-color: var(--dark-text);
+    --bs-table-border-color: var(--dark-surface);
+}
+
+/* Dark Theme Alert Styles */
+.alert {
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
+}
+
+.alert-info {
+    background-color: var(--dark-surface);
+    border-color: var(--vibrant-coral);
+}
+
+/* Dark Theme Modal Styles */
+.modal-content {
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-surface-light);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--dark-surface-light);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--dark-surface-light);
+}
+
+/* Dark Theme Dropdown Styles */
+.dropdown-menu {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-surface-light);
+}
+
+.dropdown-item {
+    color: var(--dark-text);
+}
+
+.dropdown-item:hover {
+    background-color: var(--dark-surface-light);
+    color: var(--vibrant-coral);
+}
+
+/* Dark Theme Badge Styles */
+.badge {
+    background-color: var(--dark-surface-light);
+    color: var(--dark-text);
+}
+
+/* Dark Theme Progress Bar */
+.progress {
+    background-color: var(--dark-surface-light);
+}
+
+/* Dark Theme Accordion */
+.accordion-button {
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--dark-surface-light);
+    color: var(--vibrant-coral);
+}
+
+.accordion-item {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-surface-light);
+}
+
+/* Dark Theme Tabs */
+.nav-tabs .nav-link {
+    color: var(--dark-text);
+    border-color: var(--dark-surface-light);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--dark-surface);
+    color: var(--vibrant-coral);
+    border-color: var(--vibrant-coral);
+}
+
+/* Dark Theme Pagination */
+.page-link {
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border-color: var(--dark-surface-light);
+}
+
+.page-link:hover {
+    background-color: var(--dark-surface-light);
+    color: var(--vibrant-coral);
+}
+
+.page-item.active .page-link {
+    background-color: var(--vibrant-coral);
+    border-color: var(--vibrant-coral);
+}
+
+/* Dark Theme Breadcrumb */
+.breadcrumb {
+    background-color: var(--dark-surface);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--dark-text-secondary);
+}
+
+.breadcrumb-item.active {
+    color: var(--dark-text-secondary);
+}
 
     /* Ken Burns Effect for Carousel Images */
 

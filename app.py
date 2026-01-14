@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Group information
 group_info = {
     'name': 'UB GROUP',
-    'tagline': 'BRINGING DREAMS TOGETHER UNDER ONE ROOF',
+    'tagline': 'REAL ESTATE • HOSPITALITY • EDUCATION • SPORTS\n\nSERVING YOU IN EVERY ASPECT.',
     'overview': '"UB Group is a diverse organization bringing together multiple ventures under one umbrella. From UB World\'s residential spaces to hospitality at Hotel Red Diamond, educational initiatives like Chocolate Kidz School, and agricultural ventures through UB Farms, we aim to create a comprehensive community experience. Each project reflects our commitment to quality, comfort, and innovation, all under the UB Group name."',
     'about_us': '"At UB Group, we believe in creating a holistic community experience by uniting a variety of ventures under one roof. Our portfolio spans residential living with UB World, top-tier hospitality at Hotel Red Diamond, quality education through Chocolate Kids School, vibrant lifestyle amenities like the Red Diamond Sports Center, and sustainable agriculture through UB Farms. Each of our projects reflects our commitment to quality, comfort, and innovation, all designed to enrich the lives of our customers and community. We take pride in being a trusted name that brings dreams together under one roof."'
 }
@@ -60,8 +60,8 @@ businesses = [
     },
     {
         'name': 'UB Farms',
-        'sector': 'Agriculture',
-        'description': 'UB Farms is a modern agricultural venture focused on sustainable farming practices and high-quality crop production. Committed to innovation in agriculture, UB Farms aims to contribute to food security while promoting environmentally responsible farming methods.',
+        'sector': 'Leisure and Recreation',
+        'description': 'UB Farms is a beautiful farm space available for rent, perfect for family gatherings and friendly get-togethers. Offering a serene environment for leisure activities, it provides an ideal retreat for creating memorable moments with loved ones away from the hustle and bustle of city life.',
         'logo': 'ubfarmslogo.jpeg',
         'address': 'Bilaspur, Chhattisgarh, India',
         'contacts': ['+91 98279 00051'],

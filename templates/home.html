@@ -22,7 +22,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-on-scroll">
-                    <h1 class="display-4">{{ group_info.name }}</h1>
+                    <div class="hero-logo-container mb-4">
+                        <img src="{{ url_for('static', filename='img/ub.png') }}" alt="UB Group Logo" class="hero-logo">
+                        <h1 class="display-4 hero-group-text">GROUP</h1>
+                    </div>
                     <p class="lead">{{ group_info.tagline }}</p>
                     <p class="lead-intro">Pioneering progress and creating a better future through innovation and excellence.</p>
                     <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg">Discover More</a>
@@ -99,7 +102,7 @@
                                 <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-photo" alt="{{ leader.name }}">
                                 {% else %}
                                 <div class="leader-photo-placeholder">
-                                    <i class="fas fa-user fa-5x text-muted"></i>
+                                    <i class="fas fa-user fa-5x"></i>
                                 </div>
                                 {% endif %}
                             </div>

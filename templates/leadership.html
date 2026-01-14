@@ -34,7 +34,7 @@
                             <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }}">
                         {% else %}
                             <div class="leader-list-photo-placeholder">
-                                <i class="fas fa-user fa-4x text-muted"></i>
+                                    <i class="fas fa-user fa-4x"></i>
                             </div>
                         {% endif %}
                         </div>
@@ -43,7 +43,7 @@
                         <div class="leader-list-info">
                             <h2 class="leader-name">{{ leader.name }}</h2>
                             <p class="leader-position text-primary">{{ leader.position }}</p>
-                            <p class="leader-business text-muted">{{ leader.business }}</p>
+                            <p class="leader-business">{{ leader.business }}</p>
                             <p class="leader-bio">{{ leader.bio }}</p>
                         </div>
                     </div>
