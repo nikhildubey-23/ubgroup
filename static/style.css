@@ -284,6 +284,15 @@ a:hover {
     object-fit: cover;
 }
 
+.leadership-preview .leader-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--alabaster-grey);
+}
+
 .leadership-preview .leader-name {
     font-size: 1.25rem;
     font-weight: 700;
@@ -301,6 +310,45 @@ a:hover {
 .leadership-preview .leader-business {
     font-size: 0.9rem;
     color: var(--khaki-beige);
+}
+
+/* Leadership Carousel Styles */
+.leadership-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.leadership-carousel {
+    display: flex;
+    gap: 2rem;
+    animation: slideLeft 60s linear infinite;
+    width: max-content;
+}
+
+.leadership-carousel-item {
+    flex: 0 0 280px;
+    min-width: 280px;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.leadership-carousel-wrapper:hover .leadership-carousel {
+    animation-play-state: paused;
+}
+
+/* Duplicate carousel items for seamless loop */
+.leadership-carousel::after {
+    content: '';
 }
 
 /* About Page Styles */

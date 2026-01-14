@@ -63,15 +63,15 @@ businesses = [
     }
 ]
 
-# Leadership data
+# Leadership data - Ordered: manish, saina, rahul, abhinav, ashish, karan, mohit
 leadership = [
-    {'name': 'Ashish Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'ashishsir.jpeg', 'bio': 'With a strategic vision for modern living, Ashish Ubhrani leads UB World in creating residential spaces that blend comfort, quality, and community.', 'css_class': 'ashish-ubhrani'},
+    {'name': 'Manish Ubhrani', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': 'mahish.jpg', 'bio': 'Manish Ubhrani leads the Red Diamond Sports Center, promoting a culture of fitness and well-being by providing state-of-the-art facilities for sports enthusiasts.', 'css_class': 'manish-ubhrani'},
+    {'name': 'Saina Ubhrani', 'position': 'MD', 'business': 'Chocolate Kids School', 'photo': 'saina.jpg', 'bio': 'Saina Ubhrani heads Chocolate Kids School, where she is committed to fostering a joyful and nurturing learning environment for early education.', 'css_class': 'saina-ubhrani'},
     {'name': 'Rahul Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'rahul_sir_logo.jpg', 'bio': 'Rahul Ubhrani is dedicated to executing the vision of UB World, focusing on delivering homes that offer a perfect balance of lifestyle and long-term value.', 'css_class': 'rahul-ubhrani'},
     {'name': 'Abhinav Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'abhinav_sir.jpg', 'bio': 'Abhinav Ubhrani oversees Hotel Red Diamond, ensuring a premium hospitality experience that combines elegance, comfort, and exceptional service for all guests.', 'css_class': 'abhinav-ubhrani'},
+    {'name': 'Ashish Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'ashishsir.jpeg', 'bio': 'With a strategic vision for modern living, Ashish Ubhrani leads UB World in creating residential spaces that blend comfort, quality, and community.', 'css_class': 'ashish-ubhrani'},
     {'name': 'Karan Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'karan.jpg', 'bio': 'Karan Ubhrani plays a key role in managing Hotel Red Diamond, focusing on operational excellence and maintaining a welcoming atmosphere for travelers.', 'css_class': 'karan-ubhrani'},
-    {'name': 'Manish Ubhrani', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': 'mahish.jpg', 'bio': 'Manish Ubhrani leads the Red Diamond Sports Center, promoting a culture of fitness and well-being by providing state-of-the-art facilities for sports enthusiasts.', 'css_class': 'manish-ubhrani'},
-    {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': None, 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubrani'},
-    {'name': 'Saina Ubhrani', 'position': 'MD', 'business': 'Chocolate Kids School', 'photo': 'saina.jpg', 'bio': 'Saina Ubhrani heads Chocolate Kids School, where she is committed to fostering a joyful and nurturing learning environment for early education.', 'css_class': 'saina-ubhrani'}
+    {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': 'mohit.jpeg', 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubrani'}
 ]
 
 @app.route('/sitemap.xml')

@@ -82,25 +82,31 @@
     <section class="py-5 leadership-preview">
         <div class="container">
             <h2 class="text-center mb-5 animate-on-scroll">Our Leadership</h2>
-            <div class="row">
-                {% for leader in leadership[:4] %}
-                <div class="col-lg-3 col-md-6 mb-4 animate-on-scroll">
-                    <div class="leader-card text-center">
-                        <div class="leader-photo-wrapper">
-                            {% if leader.photo %}
-                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-photo" alt="{{ leader.name }}">
-                            {% endif %}
-                        </div>
-                        <div class="leader-info">
-                            <h5 class="leader-name">{{ leader.name }}</h5>
-                            <p class="leader-position">{{ leader.position }}</p>
-                            <p class="leader-business">{{ leader.business }}</p>
+            <div class="leadership-carousel-wrapper">
+                <div class="leadership-carousel" id="leadershipCarousel">
+                    {% for leader in leadership %}
+                    <div class="leadership-carousel-item">
+                        <div class="leader-card text-center">
+                            <div class="leader-photo-wrapper">
+                                {% if leader.photo %}
+                                <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-photo" alt="{{ leader.name }}">
+                                {% else %}
+                                <div class="leader-photo-placeholder">
+                                    <i class="fas fa-user fa-5x text-muted"></i>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="leader-info">
+                                <h5 class="leader-name">{{ leader.name }}</h5>
+                                <p class="leader-position">{{ leader.position }}</p>
+                                <p class="leader-business">{{ leader.business }}</p>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
-            <div class="text-center animate-on-scroll">
+            <div class="text-center animate-on-scroll mt-5">
                 <a href="{{ url_for('leadership_page') }}" class="btn btn-primary">View All Leaders</a>
             </div>
         </div>

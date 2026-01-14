@@ -52,6 +52,21 @@ function rotateHeroImages() {
     }
 }
 
+// Leadership Carousel Initialization
+function initLeadershipCarousel() {
+    const carousel = document.getElementById('leadershipCarousel');
+    if (!carousel) return;
+
+    // Get all carousel items
+    const items = carousel.querySelectorAll('.leadership-carousel-item');
+    
+    // Clone all items and append them for seamless loop
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+}
+
 // Smooth scrolling for anchor links (if needed in future)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -62,11 +77,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Initialize hero images when document is ready
+// Initialize on DOM ready
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeroImages);
+    document.addEventListener('DOMContentLoaded', () => {
+        initHeroImages();
+        initLeadershipCarousel();
+    });
 } else {
     initHeroImages();
+    initLeadershipCarousel();
 }
 
 // Add any additional interactivity here
