@@ -19,15 +19,294 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-footer {
-    background-color: var(--prussian-blue);
+/* Modern Footer Styles */
+.modern-footer {
+    background: linear-gradient(135deg, #102542 0%, #1a3a5c 50%, #0f1e33 100%);
     color: var(--white);
-    padding: 2rem 0;
     margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
-footer h5 {
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vibrant-coral), #ff6b6b, var(--vibrant-coral));
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+.footer-top {
+    padding: 60px 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.contact-item i {
+    width: 20px;
+    margin-right: 12px;
     color: var(--vibrant-coral);
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-title {
+    color: var(--vibrant-coral);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--vibrant-coral);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-links a i {
+    font-size: 10px;
+    margin-right: 8px;
+    color: var(--vibrant-coral);
+    transition: transform 0.3s ease;
+}
+
+.footer-links a:hover i {
+    transform: translateX(3px);
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    margin-bottom: 25px;
+}
+
+.newsletter-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 12px 15px;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--vibrant-coral);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+    color: var(--white);
+}
+
+.btn-subscribe {
+    background: var(--vibrant-coral);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-link:hover {
+    background: var(--vibrant-coral);
+    border-color: var(--vibrant-coral);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.copyright p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--vibrant-coral);
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.credit {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.credit a {
+    color: var(--vibrant-coral);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.credit a:hover {
+    color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 40px 0 30px;
+    }
+    
+    .footer-bottom-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-contact {
+        align-items: center;
+    }
 }
 
 .card {
@@ -381,21 +660,12 @@ a:hover {
 
 /* Businesses Page Styles */
 .businesses-hero {
-    background: url('img/school_img.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: var(--prussian-blue);
     padding: 60px 0;
     position: relative;
 }
 
-.businesses-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
+
 
 .businesses-hero .container {
     position: relative;
@@ -447,21 +717,12 @@ a:hover {
 
 /* Leadership Page Styles */
 .leadership-hero {
-    background: url('img/ubworld.jpeg') no-repeat center center;
-    background-size: cover;
+    background-color: var(--prussian-blue);
     padding: 60px 0;
     position: relative;
 }
 
-.leadership-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
+
 
 .leadership-hero .container {
     position: relative;
