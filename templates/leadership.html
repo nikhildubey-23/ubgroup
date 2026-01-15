@@ -19,6 +19,7 @@
         <div class="container animate-on-scroll">
             <h1 class="display-4">Our Leadership</h1>
             <p class="lead">Meet the team driving our success.</p>
+            
         </div>
     </section>
 
@@ -31,17 +32,26 @@
                     <div class="col-md-3 text-center {% if loop.index0 is odd %}order-md-2{% endif %}">
                         <div class="leader-list-photo-wrapper">
                         {% if leader.photo %}
-                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }}">
+                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }}" 
+                            {% if "Manish Ubhrani" in leader.name %}title="Visionary and power force behind UB Group is Manish Ubhrani"{% endif %}>
                         {% else %}
                             <div class="leader-list-photo-placeholder">
                                     <i class="fas fa-user fa-4x"></i>
                             </div>
+                        {% endif %}
+                        {% if "Manish Ubhrani" in leader.name %}
+                        <div class="mt-2">
+                            <small class="text-warning fst-italic">"Visionary and power force behind UB Group"</small>
+                        </div>
                         {% endif %}
                         </div>
                     </div>
                     <div class="col-md-9 {% if loop.index0 is odd %}order-md-1 text-md-end{% endif %}">
                         <div class="leader-list-info">
                             <h2 class="leader-name">{{ leader.name }}</h2>
+                            {% if "Manish Ubhrani" in leader.name %}
+                            <p class="text-warning fw-bold fst-italic mb-3">Visionary and power force behind UB Group </p>
+                            {% endif %}
                             <p class="leader-position text-primary">{{ leader.position }}</p>
                             <p class="leader-business">{{ leader.business }}</p>
                             <p class="leader-bio">{{ leader.bio }}</p>
