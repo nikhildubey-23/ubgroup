@@ -55,7 +55,7 @@ businesses = [
         'description': 'Chocolate Kids School is an early education institution focused on nurturing young minds in a safe and joyful environment. With a balance of learning and play, the school emphasizes creativity, values, and strong foundational development.',
         'logo': 'school_img.jpg',
         'address': 'Jagmal Chowk, opposite Yamaha Showroom, Torwa, Bilaspur, Chhattisgarh 495004',
-        'contacts': ['+91 98279 00051'],
+        'contacts': ['+91 87199 95554   '],
         'website': ''
     },
     {
