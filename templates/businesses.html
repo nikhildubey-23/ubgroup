@@ -51,6 +51,48 @@
                             <p class="card-text mt-3"><strong><i class="fas fa-globe"></i> Website:</strong></p>
                             <a href="{{ business.website }}" target="_blank" class="btn btn-outline-primary btn-sm">Visit Website</a>
                             {% endif %}
+                            {% if business.name == 'Chocolate Kids School' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('school_showcase') }}" class="btn btn-success btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if business.name == 'Hotel Red Diamond' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('red_diamond_showcase') }}" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if business.name == 'UB World' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('ub_world_showcase') }}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if business.name == 'UB Farms' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('ub_farms_showcase') }}" class="btn btn-success btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if business.name == 'Rising Star Turf' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('rising_star_turf_showcase') }}" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if business.name == 'Red Diamond Sports Center' %}
+                            <div class="mt-3">
+                                <a href="{{ url_for('red_diamond_sports_center_showcase') }}" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-images me-1"></i>View Gallery
+                                </a>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

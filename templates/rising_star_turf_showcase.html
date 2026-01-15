@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}Red Diamond Hotel Showcase - {{ group_info.name }}{% endblock %}
+{% block title %}Rising Star Turf Showcase - {{ group_info.name }}{% endblock %}
 
 {% block meta_description %}
-<meta name="description" content="Explore the stunning Red Diamond Hotel through our curated image gallery. Experience luxury and elegance at its finest.">
+<meta name="description" content="Explore Rising Star Turf's professional cricket facilities through our curated image gallery. Discover premium sports infrastructure for players of all levels.">
 {% endblock %}
 
 {% block og_title %}
-<meta property="og:title" content="Red Diamond Hotel Showcase - UB Group">
+<meta property="og:title" content="Rising Star Turf Showcase - UB Group">
 {% endblock %}
 
 {% block og_description %}
-<meta property="og:description" content="Explore the stunning Red Diamond Hotel through our curated image gallery. Experience luxury and elegance at its finest.">
+<meta property="og:description" content="Explore Rising Star Turf's professional cricket facilities through our curated image gallery. Discover premium sports infrastructure for players of all levels.">
 {% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="hero-section text-white text-center position-relative" 
-         style="background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF6B6B 100%); min-height: 60vh; display: flex; align-items: center;">
+         style="background: linear-gradient(135deg, #EA580C 0%, #F97316 50%, #FB923C 100%); min-height: 60vh; display: flex; align-items: center;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-                    <i class="fas fa-gem text-warning me-3"></i>Red Diamond Hotel
+                    <i class="fas fa-cricket text-warning me-3"></i>Rising Star Turf
                 </h1>
                 <p class="lead mb-4 animate__animated animate__fadeInUp">
-                    Experience luxury and elegance through our curated collection of stunning hotel imagery
+                    Discover professional cricket facilities designed for players of all levels, from training to competitive matches
                 </p>
                 <div class="animate__animated animate__fadeInUp animate__delay-1s">
                     <a href="#gallery" class="btn btn-light btn-lg me-3">
@@ -45,40 +45,40 @@
     </div>
 </section>
 
-<!-- Hotel Info Cards -->
+<!-- Rising Star Turf Info Cards -->
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm red-diamond-card" style="border-top: 4px solid #DC143C !important;">
+                <div class="card h-100 border-0 shadow-sm rst-card" style="border-top: 4px solid #F97316 !important;">
                     <div class="card-body text-center p-4">
                         <div class="mb-3">
-                            <i class="fas fa-hotel text-danger" style="font-size: 3rem;"></i>
+                            <i class="fas fa-cricket text-orange" style="font-size: 3rem;"></i>
                         </div>
-                        <h5 class="card-title text-danger">Premium Hospitality</h5>
-                        <p class="card-text">Luxurious accommodations with modern amenities and exceptional service for both business and leisure travelers.</p>
+                        <h5 class="card-title text-orange">Professional Cricket</h5>
+                        <p class="card-text">High-quality cricket turf designed for professional matches and serious training sessions with optimal playing conditions.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm red-diamond-card" style="border-top: 4px solid #DC143C !important;">
+                <div class="card h-100 border-0 shadow-sm rst-card" style="border-top: 4px solid #F97316 !important;">
                     <div class="card-body text-center p-4">
                         <div class="mb-3">
-                            <i class="fas fa-utensils text-danger" style="font-size: 3rem;"></i>
+                            <i class="fas fa-users text-orange" style="font-size: 3rem;"></i>
                         </div>
-                        <h5 class="card-title text-danger">Fine Dining</h5>
-                        <p class="card-text">Exquisite culinary experiences with expertly crafted dishes in an elegant atmosphere.</p>
+                        <h5 class="card-title text-orange">All Levels Welcome</h5>
+                        <p class="card-text">Facilities designed to accommodate players of all skill levels, from beginners to advanced cricketers.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm red-diamond-card" style="border-top: 4px solid #DC143C !important;">
+                <div class="card h-100 border-0 shadow-sm rst-card" style="border-top: 4px solid #F97316 !important;">
                     <div class="card-body text-center p-4">
                         <div class="mb-3">
-                            <i class="fas fa-concierge-bell text-danger" style="font-size: 3rem;"></i>
+                            <i class="fas fa-trophy text-orange" style="font-size: 3rem;"></i>
                         </div>
-                        <h5 class="card-title text-danger">Exceptional Service</h5>
-                        <p class="card-text">Dedicated staff committed to providing personalized attention and memorable experiences.</p>
+                        <h5 class="card-title text-orange">Competitive Play</h5>
+                        <p class="card-text">Perfect venue for practice matches, tournaments, and competitive cricket events in a professional environment.</p>
                     </div>
                 </div>
             </div>
@@ -90,10 +90,10 @@
 <section id="gallery" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold text-danger mb-3">
-                <i class="fas fa-gem me-2"></i>Hotel Gallery
+            <h2 class="display-5 fw-bold text-orange mb-3">
+                <i class="fas fa-cricket me-2"></i>Rising Star Turf Gallery
             </h2>
-            <p class="lead text-muted">Discover the elegance and beauty of Red Diamond Hotel</p>
+            <p class="lead text-muted">Explore our professional cricket facilities and sporting environment</p>
         </div>
         
         <div class="row g-4">
@@ -101,12 +101,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img1.jpeg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst1.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -116,12 +116,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img2.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst2.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -131,12 +131,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img3.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst3.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -146,12 +146,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img4.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst4.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -161,12 +161,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img5.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst5.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -176,12 +176,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img6.jpeg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst6.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -191,12 +191,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img7.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst7.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -206,12 +206,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img8.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst8.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -221,57 +221,12 @@
             <div class="col-lg-4 col-md-6 gallery-item">
                 <div class="card h-100 shadow hover-lift">
                     <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img9.jpg') }}" 
+                        <img src="{{ url_for('static', filename='img/rst9.jpg') }}" 
                              class="w-100 h-100 object-fit-cover" 
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
-                        <p class="card-text text-muted"></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Image 10 -->
-            <div class="col-lg-4 col-md-6 gallery-item">
-                <div class="card h-100 shadow hover-lift">
-                    <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img10.jpg') }}" 
-                             class="w-100 h-100 object-fit-cover" 
-                             alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
-                        <p class="card-text text-muted"></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Image 11 -->
-            <div class="col-lg-4 col-md-6 gallery-item">
-                <div class="card h-100 shadow hover-lift">
-                    <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img11.jpeg') }}" 
-                             class="w-100 h-100 object-fit-cover" 
-                             alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
-                        <p class="card-text text-muted"></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Image 12 -->
-            <div class="col-lg-4 col-md-6 gallery-item">
-                <div class="card h-100 shadow hover-lift">
-                    <div class="overflow-hidden" style="height: 250px;">
-                        <img src="{{ url_for('static', filename='img/red_diamond_hotel_img12.jpeg') }}" 
-                             class="w-100 h-100 object-fit-cover" 
-                             alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-danger"></h5>
+                        <h5 class="card-title text-orange"></h5>
                         <p class="card-text text-muted"></p>
                     </div>
                 </div>
@@ -280,29 +235,29 @@
     </div>
 </section>
 
-<!-- Hotel Information CTA -->
+<!-- Rising Star Turf Information CTA -->
 <section class="py-5 bg-gradient text-white">
     <div class="container text-center">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h2 class="display-6 fw-bold mb-4">
-                    <i class="fas fa-gem text-warning me-2"></i>Experience Red Diamond Hotel
+                    <i class="fas fa-cricket text-warning me-2"></i>Book Your Cricket Session
                 </h2>
                 <p class="lead mb-4">
-                    Visit us for an unforgettable stay where luxury meets comfort. Our dedicated team is committed to making your experience truly exceptional.
+                    Experience professional cricket facilities at Rising Star Turf. Whether you're looking for training, practice matches, or tournament hosting, our ground provides the perfect environment for cricket enthusiasts of all levels.
                 </p>
                 <div class="d-flex justify-content-center gap-3 flex-wrap">
                     <a href="tel:+919827900051" class="btn btn-light btn-lg">
                         <i class="fas fa-phone me-2"></i>Call Now
                     </a>
-                    <a href="https://www.instagram.com/hotel_red_diamond?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-light btn-lg">
+                    <a href="https://www.instagram.com/rising_star_turf_academy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-light btn-lg">
                         <i class="fas fa-camera me-2"></i>Instagram
                     </a>
-                    <a href="https://www.hotelreddiamond.com/" target="_blank" class="btn btn-warning btn-lg">
-                        <i class="fas fa-globe me-2"></i>Visit Website
-                    </a>
-                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                    <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg">
                         <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
+                    <a href="{{ url_for('businesses_page') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-building me-2"></i>Our Businesses
                     </a>
                 </div>
             </div>
@@ -312,7 +267,11 @@
 
 <style>
 .bg-gradient {
-    background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF6B6B 100%);
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 50%, #FB923C 100%);
+}
+
+.text-orange {
+    color: #F97316 !important;
 }
 
 .hover-lift {
@@ -321,7 +280,7 @@
 
 .hover-lift:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.3);
 }
 
 .gallery-item img {
@@ -332,13 +291,13 @@
     transform: scale(1.1);
 }
 
-.red-diamond-card {
+.rst-card {
     transition: all 0.3s ease;
 }
 
-.red-diamond-card:hover {
+.rst-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(220, 20, 60, 0.2);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.2);
 }
 
 @media (max-width: 768px) {

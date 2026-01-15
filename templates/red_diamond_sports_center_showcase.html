@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Red Diamond Sports Center Showcase - {{ group_info.name }}{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Explore Red Diamond Sports Center's premium fitness and sports facilities through our curated image gallery. Discover modern equipment and wellness environments.">
+{% endblock %}
+
+{% block og_title %}
+<meta property="og:title" content="Red Diamond Sports Center Showcase - UB Group">
+{% endblock %}
+
+{% block og_description %}
+<meta property="og:description" content="Explore Red Diamond Sports Center's premium fitness and sports facilities through our curated image gallery. Discover modern equipment and wellness environments.">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-white text-center position-relative" 
+         style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 50%, #F87171 100%); min-height: 60vh; display: flex; align-items: center;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+                    <i class="fas fa-dumbbell text-warning me-3"></i>Red Diamond Sports Center
+                </h1>
+                <p class="lead mb-4 animate__animated animate__fadeInUp">
+                    Discover premium fitness and sports facilities designed for active living, wellness, and athletic excellence
+                </p>
+                <div class="animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="#gallery" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-images me-2"></i>View Gallery
+                    </a>
+                    <a href="{{ url_for('businesses_page') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-building me-2"></i>Our Businesses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-absolute bottom-0 start-0 w-100">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Red Diamond Sports Center Info Cards -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rds-card" style="border-top: 4px solid #EF4444 !important;">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-dumbbell text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title text-danger">Modern Equipment</h5>
+                        <p class="card-text">State-of-the-art fitness equipment and machines designed for effective workouts and optimal training results.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rds-card" style="border-top: 4px solid #EF4444 !important;">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-heartbeat text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title text-danger">Wellness Focus</h5>
+                        <p class="card-text">Comprehensive facilities promoting overall health, fitness, and well-being for individuals of all fitness levels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rds-card" style="border-top: 4px solid #EF4444 !important;">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-users text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title text-danger">Community Fitness</h5>
+                        <p class="card-text">Welcoming environment fostering a community of fitness enthusiasts supporting each other's health goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Gallery -->
+<section id="gallery" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-danger mb-3">
+                <i class="fas fa-dumbbell me-2"></i>Red Diamond Sports Center Gallery
+            </h2>
+            <p class="lead text-muted">Explore our modern fitness facilities and sports environments</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-lg-6 col-md-6 gallery-item">
+                <div class="card h-100 shadow hover-lift">
+                    <div class="overflow-hidden" style="height: 300px;">
+                        <img src="{{ url_for('static', filename='img/rds1.jpg') }}" 
+                             class="w-100 h-100 object-fit-cover" 
+                             alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger"></h5>
+                        <p class="card-text text-muted"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="col-lg-6 col-md-6 gallery-item">
+                <div class="card h-100 shadow hover-lift">
+                    <div class="overflow-hidden" style="height: 300px;">
+                        <img src="{{ url_for('static', filename='img/rds2.jpg') }}" 
+                             class="w-100 h-100 object-fit-cover" 
+                             alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger"></h5>
+                        <p class="card-text text-muted"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5">
+                        <h3 class="text-center mb-4 text-danger">Why Choose Red Diamond Sports Center?</h3>
+                        <div class="row g-4">
+                            <div class="col-md-3 text-center">
+                                <i class="fas fa-clock text-danger" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                                <h6>Flexible Hours</h6>
+                                <p class="text-muted small">Extended operating hours to fit your schedule</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <i class="fas fa-user-tie text-danger" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                                <h6>Expert Trainers</h6>
+                                <p class="text-muted small">Professional guidance for optimal results</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <i class="fas fa-medal text-danger" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                                <h6>Quality Equipment</h6>
+                                <p class="text-muted small">Premium fitness machines and tools</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <i class="fas fa-shield-alt text-danger" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                                <h6>Safe Environment</h6>
+                                <p class="text-muted small">Clean, maintained facilities for your safety</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Red Diamond Sports Center Information CTA -->
+<section class="py-5 bg-gradient text-white">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-4">
+                    <i class="fas fa-dumbbell text-warning me-2"></i>Start Your Fitness Journey
+                </h2>
+                <p class="lead mb-4">
+                    Join Red Diamond Sports Center and transform your health and wellness. Our modern facilities, expert trainers, and supportive community are here to help you achieve your fitness goals and live a healthier, more active life.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="tel:+919827900051" class="btn btn-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Call Now
+                    </a>
+                    <a href="https://www.instagram.com/red_diamond_sportscenter?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-light btn-lg">
+                        <i class="fas fa-camera me-2"></i>Instagram
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
+                    <a href="{{ url_for('businesses_page') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-building me-2"></i>Our Businesses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.bg-gradient {
+    background: linear-gradient(135deg, #DC2626 0%, #EF4444 50%, #F87171 100%);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(239, 68, 68, 0.3);
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.rds-card {
+    transition: all 0.3s ease;
+}
+
+.rds-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-section .display-3 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+{% endblock %}

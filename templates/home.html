@@ -63,7 +63,7 @@
             <div class="row">
                 {% for business in businesses[:3] %}
                 <div class="col-md-4 mb-4 animate-on-scroll">
-                    <div class="card h-100 {% if business.name == 'Hotel Red Diamond' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_showcase') }}'"{% elif business.name == 'UB World' %}clickable-card" onclick="window.location.href='{{ url_for('ub_world_showcase') }}'"{% else %}"{% endif %}>
+                    <div class="card h-100 {% if business.name == 'Hotel Red Diamond' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_showcase') }}'"{% elif business.name == 'UB World' %}clickable-card" onclick="window.location.href='{{ url_for('ub_world_showcase') }}'"{% elif business.name == 'Red Diamond Sports Center' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_sports_center_showcase') }}'"{% else %}"{% endif %}>
                         {% if business.logo %}
                         <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
                         {% endif %}

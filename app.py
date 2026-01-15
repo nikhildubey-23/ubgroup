@@ -125,5 +125,21 @@ def red_diamond_showcase():
 def ub_world_showcase():
     return render_template('ub_world_showcase.html', group_info=group_info)
 
+@app.route('/school-showcase')
+def school_showcase():
+    return render_template('school_showcase.html', group_info=group_info)
+
+@app.route('/ub-farms-showcase')
+def ub_farms_showcase():
+    return render_template('ub_farms_showcase.html', group_info=group_info)
+
+@app.route('/rising-star-turf-showcase')
+def rising_star_turf_showcase():
+    return render_template('rising_star_turf_showcase.html', group_info=group_info)
+
+@app.route('/red-diamond-sports-center-showcase')
+def red_diamond_sports_center_showcase():
+    return render_template('red_diamond_sports_center_showcase.html', group_info=group_info)
+
 if __name__ == '__main__':
     app.run(debug=True)
