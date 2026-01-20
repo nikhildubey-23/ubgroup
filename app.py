@@ -80,7 +80,7 @@ businesses = [
 
 # Leadership data - Ordered: manish, saina, rahul, abhinav, ashish, karan, mohit
 leadership = [
-    {'name': 'Manish Ubhrani', 'position': 'MD', 'business': 'Red Diamond Sports Center', 'photo': 'mahish.jpg', 'bio': 'Manish Ubhrani leads the Red Diamond Sports Center, promoting a culture of fitness and well-being by providing state-of-the-art facilities for sports enthusiasts.', 'css_class': 'manish-ubhrani'},
+    {'name': 'Manish Ubhrani', 'position': 'MD', 'business': 'UB Group', 'photo': 'mahish.jpg', 'bio': 'Manish Ubhrani leads the Red Diamond Sports Center, promoting a culture of fitness and well-being by providing state-of-the-art facilities for sports enthusiasts.', 'css_class': 'manish-ubhrani'},
     {'name': 'Saina Ubhrani', 'position': 'MD', 'business': 'Chocolate Kids School', 'photo': 'saina.jpg', 'bio': 'Saina Ubhrani heads Chocolate Kids School, where she is committed to fostering a joyful and nurturing learning environment for early education.', 'css_class': 'saina-ubhrani'},
     {'name': 'Rahul Ubhrani', 'position': 'MD', 'business': 'UB World', 'photo': 'rahul_sir_logo.jpg', 'bio': 'Rahul Ubhrani is dedicated to executing the vision of UB World, focusing on delivering homes that offer a perfect balance of lifestyle and long-term value.', 'css_class': 'rahul-ubhrani'},
     {'name': 'Abhinav Ubhrani', 'position': 'MD', 'business': 'Hotel Red Diamond', 'photo': 'abhinav_sir.jpg', 'bio': 'Abhinav Ubhrani oversees Hotel Red Diamond, ensuring a premium hospitality experience that combines elegance, comfort, and exceptional service for all guests.', 'css_class': 'abhinav-ubhrani'},
