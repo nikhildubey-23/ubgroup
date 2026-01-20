@@ -641,6 +641,14 @@ a:hover {
     margin-bottom: 5px;
 }
 
+.leadership-preview .leader-visionary {
+    font-size: 0.9rem;
+    color: var(--vibrant-coral);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
 .leadership-preview .leader-position {
     font-size: 1rem;
     color: var(--vibrant-coral);

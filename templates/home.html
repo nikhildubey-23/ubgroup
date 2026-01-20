@@ -108,6 +108,9 @@
                             </div>
                             <div class="leader-info">
                                 <h5 class="leader-name">{{ leader.name }}</h5>
+                                {% if leader.name == 'Manish Ubhrani' %}
+                                <p class="leader-visionary">Visionary and power force behind UB Group</p>
+                                {% endif %}
                                 <p class="leader-position">{{ leader.position }}</p>
                                 <p class="leader-business">{{ leader.business }}</p>
                             </div>
