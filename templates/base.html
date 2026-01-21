@@ -30,7 +30,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="main navigation">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='img/ub.png') }}" alt="UB Group Logo" class="navbar-logo">
@@ -62,10 +62,12 @@
     </nav>
 
     <!-- Page Content -->
-    {% block content %}{% endblock %}
+    <main role="main" id="main-content">
+        {% block content %}{% endblock %}
+    </main>
 
     <!-- Footer -->
-    <footer class="modern-footer">
+    <footer class="modern-footer" role="contentinfo">
         <!-- Footer Top Section with Pattern -->
         <div class="footer-top">
             <div class="container">
@@ -131,8 +133,9 @@
                             <form class="newsletter-form">
                                 <div class="input-group">
                                     <input type="email" class="form-control" placeholder="Your email" required>
-                                    <button class="btn btn-subscribe" type="submit">
+                                    <button class="btn btn-subscribe" type="submit" aria-label="Subscribe to newsletter">
                                         <i class="fas fa-paper-plane"></i>
+                                        <span class="visually-hidden">Subscribe</span>
                                     </button>
                                 </div>
                             </form>

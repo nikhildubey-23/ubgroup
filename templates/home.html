@@ -65,10 +65,12 @@
                 <div class="col-md-4 mb-4 animate-on-scroll">
                     <div class="card h-100 {% if business.name == 'Hotel Red Diamond' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_showcase') }}'"{% elif business.name == 'UB World' %}clickable-card" onclick="window.location.href='{{ url_for('ub_world_showcase') }}'"{% elif business.name == 'Red Diamond Sports Center' %}clickable-card" onclick="window.location.href='{{ url_for('red_diamond_sports_center_showcase') }}'"{% else %}"{% endif %}>
                         {% if business.logo %}
-                        <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
+                        <div class="card-img-container">
+                            <img src="{{ url_for('static', filename='img/' + business.logo) }}" class="card-img-top" alt="{{ business.name }} Logo">
+                        </div>
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title">{{ business.name }}</h5>
+                            <h3 class="card-title">{{ business.name }}</h3>
                             <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
                             <p class="card-text">{{ business.description[:100] }}...</p>
                             {% if business.name == 'UB World' %}
@@ -107,7 +109,7 @@
                                 {% endif %}
                             </div>
                             <div class="leader-info">
-                                <h5 class="leader-name">{{ leader.name }}</h5>
+                                <h3 class="leader-name">{{ leader.name }}</h3>
                                 {% if leader.name == 'Manish Ubhrani' %}
                                 <p class="leader-visionary">Visionary and power force behind UB Group</p>
                                 {% endif %}
