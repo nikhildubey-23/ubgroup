@@ -125,6 +125,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 10px;
 }
 
+/* Ensure h4 in footer maintains proper styling */
+footer h4.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
 .footer-title::after {
     content: '';
     position: absolute;
