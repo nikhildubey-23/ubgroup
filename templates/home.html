@@ -76,7 +76,7 @@
                             {% elif business.name == 'Hotel Red Diamond' %}
                             <a href="https://www.hotelreddiamond.com/" target="_blank" class="btn btn-outline-primary btn-sm mb-2">Visit Website</a>
                             {% endif %}
-                            <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">Learn More</a>
+                            <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">Learn More About {{ business.name }}</a>
                         </div>
                     </div>
                 </div>
