@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ubgroup.info/sitemap.xml

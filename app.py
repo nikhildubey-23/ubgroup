@@ -91,11 +91,11 @@ leadership = [
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory(os.path.join(app.root_path, ''), 'sitemap.xml')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'sitemap.xml')
 
 @app.route('/robots.txt')
 def robots():
-    return send_from_directory(os.path.join(app.root_path, ''), 'robots.txt')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'robots.txt')
 
 @app.route('/')
 def home():
