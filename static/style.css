@@ -375,6 +375,39 @@ footer h4.footer-title {
     box-shadow: 0 4px 8px rgba(212, 165, 116, 0.3);
 }
 
+/* Fix contrast for outline buttons */
+.btn-outline-primary {
+    color: var(--vibrant-coral);
+    border-color: var(--vibrant-coral);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--vibrant-coral);
+    color: var(--white);
+    border-color: var(--vibrant-coral);
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(235, 126, 10, 0.5);
+}
+
+.btn-outline-primary:disabled {
+    color: #8b949e;
+    border-color: #8b949e;
+    pointer-events: none;
+}
+
+/* Ensure all button variants meet WCAG AA standards */
+.btn {
+    min-height: 44px; /* Touch target size */
+    font-weight: 600;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(235, 126, 10, 0.5);
+}
+
 .hero-section {
     position: relative;
     height: 70vh;
