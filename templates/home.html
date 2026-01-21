@@ -17,13 +17,15 @@
     <!-- Hero Section -->
     <section class="hero-section text-center text-white">
         <div id="heroBackground" class="hero-background" data-images='["img/hotel.webp", "img/choclateschool.jpg", "img/RedDiamondSportsCenter.jpg", "img/RisingStarTurf.jpg", "img/ubfarms0.jpg", "img/ubworld2.jpeg"]'>
-            <div class="hero-bg-image" style="background-image: url('{{ url_for('static', filename='img/hotel.webp') }}');"></div>
+            <div class="hero-bg-image" style="background-image: url('{{ url_for('static', filename='img/hotel.webp') }}');">
+                <img src="{{ url_for('static', filename='img/hotel.webp') }}" alt="UB Group Hero Background" loading="eager" fetchpriority="high" style="display: none;">
+            </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-on-scroll">
                     <div class="hero-logo-container mb-4">
-                        <img src="{{ url_for('static', filename='img/ub.png') }}" alt="UB Group Logo" class="hero-logo">
+                        <img src="{{ url_for('static', filename='img/ub.png') }}" alt="UB Group Logo" class="hero-logo" width="120" height="80">
                         <h1 class="display-4 hero-group-text">GROUP</h1>
                     </div>
                     <p class="lead">{{ group_info.tagline }}</p>
