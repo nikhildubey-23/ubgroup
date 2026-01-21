@@ -75,12 +75,20 @@
                             <h3 class="card-title">{{ business.name }}</h3>
                             <p class="card-text"><strong>Sector:</strong> {{ business.sector }}</p>
                             <p class="card-text">{{ business.description[:100] }}...</p>
-                            {% if business.name == 'UB World' %}
-                            <a href="https://www.ubworld.co.in/" target="_blank" class="btn btn-outline-primary btn-sm mb-2">Visit Website</a>
-                            {% elif business.name == 'Hotel Red Diamond' %}
-                            <a href="https://www.hotelreddiamond.com/" target="_blank" class="btn btn-outline-primary btn-sm mb-2">Visit Website</a>
-                            {% endif %}
-                            <a href="{{ url_for('businesses_page') }}" class="btn btn-primary">Learn More About {{ business.name }}</a>
+                            <div class="card-buttons mt-auto">
+                                {% if business.name == 'UB World' %}
+                                <a href="https://www.ubworld.co.in/" target="_blank" class="btn btn-website">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                                {% elif business.name == 'Hotel Red Diamond' %}
+                                <a href="https://www.hotelreddiamond.com/" target="_blank" class="btn btn-website">
+                                    <i class="fas fa-external-link-alt"></i> Visit Website
+                                </a>
+                                {% endif %}
+                                <a href="{{ url_for('businesses_page') }}" class="btn btn-learn">
+                                    <i class="fas fa-arrow-right"></i> Learn More
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,6 +149,91 @@
 
 .clickable-card:active {
     transform: translateY(-2px);
+}
+
+/* Enhanced Card Button Styles */
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-buttons .btn {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-buttons .btn-website {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.card-buttons .btn-website:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #FF8E53 0%, #FF6B6B 100%);
+}
+
+.card-buttons .btn-learn {
+    background: transparent;
+    color: #FF6B6B;
+    border-color: #FF6B6B;
+}
+
+.card-buttons .btn-learn:hover {
+    background: #FF6B6B;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.card-buttons .btn i {
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+}
+
+.card-buttons .btn:hover i {
+    transform: translateX(3px);
+}
+
+/* Add shimmer effect */
+.card-buttons .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.card-buttons .btn:hover::before {
+    left: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card-buttons .btn {
+        flex: 1;
+        min-width: 120px;
+    }
 }
 </style>
 {% endblock %}
