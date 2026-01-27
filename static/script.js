@@ -6,16 +6,27 @@ let heroImages = [];
 
 function initHeroImages() {
     const heroBackground = document.getElementById('heroBackground');
-    if (!heroBackground) return;
+    if (!heroBackground) {
+        console.log('Hero background element not found');
+        return;
+    }
 
     // Get image paths from data attribute
     const imagesData = heroBackground.getAttribute('data-images');
+    console.log('Hero images data:', imagesData);
+    
     if (imagesData) {
-        heroImages = JSON.parse(imagesData);
+        try {
+            heroImages = JSON.parse(imagesData);
+            console.log('Parsed hero images:', heroImages);
+        } catch (e) {
+            console.error('Error parsing hero images:', e);
+            return;
+        }
     }
 
-    // Convert relative paths to full URLs with /static/ prefix
-    heroImages = heroImages.map(img => '/static/' + img);
+    // Images are already full URLs from Flask url_for(), no conversion needed
+    console.log('Final hero images array:', heroImages);
     
     // Preload first hero image immediately to improve LCP
     if (heroImages.length > 0) {
@@ -26,10 +37,14 @@ function initHeroImages() {
         const firstImage = new Image();
         firstImage.onload = () => {
             heroImages.preloaded[0] = true;
+            console.log('First hero image loaded');
             // Start rotation only after first image loads
             setTimeout(() => {
-                setInterval(() => requestAnimationFrame(rotateHeroImages), 2000);
-            }, 100);
+                setInterval(() => rotateHeroImages(), 3000); // Changed to 3 seconds for better visibility
+            }, 1000); // Start after 1 second
+        };
+        firstImage.onerror = () => {
+            console.error('Failed to load first hero image:', heroImages[0]);
         };
         firstImage.src = heroImages[0];
         
@@ -39,26 +54,43 @@ function initHeroImages() {
                 const img = new Image();
                 img.onload = () => {
                     heroImages.preloaded[index] = true;
+                    console.log(`Hero image ${index} loaded:`, imgSrc);
+                };
+                img.onerror = () => {
+                    console.error(`Failed to load hero image ${index}:`, imgSrc);
                 };
                 img.src = imgSrc;
             }
         });
+    } else {
+        console.error('No hero images found');
     }
 }
 
 function rotateHeroImages() {
-    if (heroImages.length === 0) return;
+    if (heroImages.length === 0) {
+        console.log('No hero images to rotate');
+        return;
+    }
 
     // Cache DOM elements to avoid repeated queries
     if (!rotateHeroImages.heroBackground) {
         rotateHeroImages.heroBackground = document.getElementById('heroBackground');
     }
     const heroBackground = rotateHeroImages.heroBackground;
-    if (!heroBackground) return;
+    if (!heroBackground) {
+        console.log('Hero background element not found during rotation');
+        return;
+    }
 
     // Get current image element (cached query)
     const currentImage = heroBackground.querySelector('.hero-bg-image');
-    if (!currentImage) return;
+    if (!currentImage) {
+        console.log('Current hero image element not found');
+        return;
+    }
+
+    console.log('Rotating to next image. Current index:', currentImageIndex);
 
     // Create new image element
     const newImage = document.createElement('div');
@@ -66,12 +98,15 @@ function rotateHeroImages() {
     
     // Move to next image
     currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-    newImage.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+    const nextImageUrl = heroImages[currentImageIndex];
+    console.log('Next image URL:', nextImageUrl);
+    
+    newImage.style.backgroundImage = `url('${nextImageUrl}')`;
     
     // Add img element for LCP discovery (except for first image which already has one)
     if (currentImageIndex > 0) {
         const img = document.createElement('img');
-        img.src = heroImages[currentImageIndex];
+        img.src = nextImageUrl;
         img.alt = `UB Group Hero Background ${currentImageIndex + 1}`;
         img.loading = 'eager';
         img.style.display = 'none';
@@ -86,14 +121,16 @@ function rotateHeroImages() {
         // Animate old image out
         currentImage.classList.add('exiting');
         
+        console.log('Added new image and marked old image as exiting');
+        
         // Remove old image after animation completes
         setTimeout(() => {
             if (currentImage.parentNode) {
                 currentImage.remove();
+                console.log('Removed old image from DOM');
             }
         }, 2000);
     });
-}
 }
 
 // Leadership Carousel Initialization
