@@ -2,7 +2,7 @@
 
 {% block title %}About Us - UB GROUP{% endblock %}
 {% block meta_description %}
-    <meta name="description" content="Learn about the history, vision, and core values of UB Group. Discover our commitment to quality, innovation, and community enrichment.">
+    <meta name="description" content="About UB Group Bilaspur - Learn about our history, vision, and commitment to serving Chhattisgarh through quality real estate, hospitality, education, and sports services. Discover our community values.">
 {% endblock %}
 
 {% block og_title %}
@@ -11,6 +11,17 @@
 
 {% block og_description %}
 <meta property="og:description" content="Learn about the history, vision, and core values of UB Group. Discover our commitment to quality, innovation, and community enrichment.">
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}

@@ -2,7 +2,7 @@
 
 {% block title %}Contact Us - UB GROUP{% endblock %}
 {% block meta_description %}
-    <meta name="description" content="Contact UB Group for any inquiries. Find our address, phone number, and email, or use our contact form to get in touch with us.">
+    <meta name="description" content="Contact UB Group Bilaspur - Get in touch with our team for real estate, hospitality, education, and sports services in Chhattisgarh. Call us at +91 95750 15001 or visit our office.">
 {% endblock %}
 
 {% block og_title %}
@@ -11,6 +11,17 @@
 
 {% block og_description %}
 <meta property="og:description" content="Contact UB Group for any inquiries. Find our address, phone number, and email, or use our contact form to get in touch with us.">
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}

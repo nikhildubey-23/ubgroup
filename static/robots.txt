@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+
+# Block common non-content paths
+Disallow: /__pycache__/
+Disallow: /.venv/
+Disallow: /.git/
+Disallow: /.idea/
+
 Sitemap: https://ubgroup.info/sitemap.xml

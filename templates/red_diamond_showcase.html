@@ -3,7 +3,7 @@
 {% block title %}Red Diamond Hotel Showcase - {{ group_info.name }}{% endblock %}
 
 {% block meta_description %}
-<meta name="description" content="Explore the stunning Red Diamond Hotel through our curated image gallery. Experience luxury and elegance at its finest.">
+<meta name="description" content="Hotel Red Diamond Bilaspur Gallery - Explore premium hospitality in Chhattisgarh. View images of our luxury hotel rooms, facilities, and exceptional service in Torwa, Bilaspur.">
 {% endblock %}
 
 {% block og_title %}
@@ -13,6 +13,68 @@
 {% block og_description %}
 <meta property="og:description" content="Explore the stunning Red Diamond Hotel through our curated image gallery. Experience luxury and elegance at its finest.">
 {% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('businesses_page') }}">Businesses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hotel Red Diamond Gallery</li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+<!-- LocalBusiness Schema for Hotel Red Diamond -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel Red Diamond",
+    "description": "Premium hospitality destination offering comfort, elegance, and warm service in Bilaspur, Chhattisgarh",
+    "url": "https://www.hotelreddiamond.com/",
+    "telephone": "+91 98279 00051",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Power House, Road, Torwa",
+        "addressLocality": "Bilaspur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "495004",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.0800",
+        "longitude": "82.1500"
+    },
+    "priceRange": "$$",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "150"
+    },
+    "amenityFeature": [
+        {
+            "@type": "LocationFeatureSpecification",
+            "name": "Free WiFi"
+        },
+        {
+            "@type": "LocationFeatureSpecification", 
+            "name": "Restaurant"
+        },
+        {
+            "@type": "LocationFeatureSpecification",
+            "name": "Room Service"
+        }
+    ],
+    "containedInPlace": {
+        "@type": "Organization",
+        "name": "UB Group",
+        "url": "https://ubgroup.info"
+    }
+}
+</script>
 
 {% block content %}
 <!-- Hero Section -->

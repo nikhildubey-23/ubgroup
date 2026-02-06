@@ -3,7 +3,7 @@
 {% block title %}School Showcase - {{ group_info.name }}{% endblock %}
 
 {% block meta_description %}
-<meta name="description" content="Explore our educational institution through our curated image gallery. Discover modern learning environments and facilities.">
+<meta name="description" content="Chocolate Kids School Bilaspur Gallery - Explore early education in Chhattisgarh. View our school facilities, classrooms, and learning environment at Jagmal Chowk, Torwa, Bilaspur.">
 {% endblock %}
 
 {% block og_title %}
@@ -13,6 +13,70 @@
 {% block og_description %}
 <meta property="og:description" content="Explore our educational institution through our curated image gallery. Discover modern learning environments and facilities.">
 {% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('businesses_page') }}">Businesses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chocolate Kids School Gallery</li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+<!-- EducationalOrganization Schema for Chocolate Kids School -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Chocolate Kids School",
+    "description": "Early education institution focused on nurturing young minds in a safe and joyful environment in Bilaspur, Chhattisgarh",
+    "telephone": "+91 87199 95554",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jagmal Chowk, opposite Yamaha Showroom, Torwa",
+        "addressLocality": "Bilaspur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "495004",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.0800",
+        "longitude": "82.1500"
+    },
+    "educationalLevel": "Early Childhood Education",
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Educational Programs",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Course",
+                    "name": "Play Group",
+                    "description": "Early learning program for toddlers"
+                }
+            },
+            {
+                "@type": "Offer", 
+                "itemOffered": {
+                    "@type": "Course",
+                    "name": "Nursery",
+                    "description": "Foundation program for young learners"
+                }
+            }
+        ]
+    },
+    "containedInPlace": {
+        "@type": "Organization",
+        "name": "UB Group",
+        "url": "https://ubgroup.info"
+    }
+}
+</script>
 
 {% block content %}
 <!-- Hero Section -->

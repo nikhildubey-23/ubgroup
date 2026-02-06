@@ -2,7 +2,7 @@
 
 {% block title %}Leadership - UB GROUP{% endblock %}
 {% block meta_description %}
-    <meta name="description" content="Meet the experienced leadership team at UB Group. Learn about the visionaries driving our success and commitment to excellence.">
+    <meta name="description" content="UB Group Leadership Team - Meet the visionary leaders driving excellence in Bilaspur, Chhattisgarh. Learn about our managing directors and their commitment to quality service delivery.">
 {% endblock %}
 
 {% block og_title %}
@@ -11,6 +11,17 @@
 
 {% block og_description %}
 <meta property="og:description" content="Meet the experienced leadership team at UB Group. Learn about the visionaries driving our success and commitment to excellence.">
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Leadership</li>
+        </ol>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}
@@ -32,7 +43,7 @@
                     <div class="col-md-3 text-center {% if loop.index0 is odd %}order-md-2{% endif %}">
                         <div class="leader-list-photo-wrapper">
                         {% if leader.photo %}
-                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }}" 
+                            <img src="{{ url_for('static', filename='img/' + leader.photo) }}" class="leader-list-photo" alt="{{ leader.name }} - {{ leader.position }}" 
                             {% if "Manish Ubhrani" in leader.name %}title="Visionary and power force behind UB Group is Manish Ubhrani"{% endif %}>
                         {% else %}
                             <div class="leader-list-photo-placeholder">

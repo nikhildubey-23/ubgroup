@@ -89,6 +89,16 @@ leadership = [
     {'name': 'Mohit Ubhrani', 'position': 'MD', 'business': 'Rising Star Turf', 'photo': 'mohit.jpeg', 'bio': 'Mohit Ubhrani is the driving force behind Rising Star Turf, a professional-grade cricket facility designed to nurture talent and support the local sporting community.', 'css_class': 'mohit-ubrani'}
 ]
 
+def get_meta_tags(title, description):
+    return {
+        'title': f"{title} - UB Group",
+        'meta_description': description,
+        'og_title': f"{title} - UB Group",
+        'og_description': description,
+        'twitter_title': f"{title} - UB Group",
+        'twitter_description': description
+    }
+
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'sitemap.xml')
@@ -99,47 +109,58 @@ def robots():
 
 @app.route('/')
 def home():
-    return render_template('home.html', group_info=group_info, businesses=businesses, leadership=leadership)
+    meta = get_meta_tags('Home', 'UB Group - Leading diversified conglomerate in Bilaspur, Chhattisgarh. Premier real estate, hospitality, education, and sports services serving the community with excellence.')
+    return render_template('home.html', group_info=group_info, businesses=businesses, leadership=leadership, **meta)
 
 @app.route('/about')
 def about():
-    return render_template('about.html', group_info=group_info)
+    meta = get_meta_tags('About Us', group_info['about_us'])
+    return render_template('about.html', group_info=group_info, **meta)
 
 @app.route('/businesses')
 def businesses_page():
-    return render_template('businesses.html', group_info=group_info, businesses=businesses)
+    meta = get_meta_tags('Our Businesses', 'Explore the diverse businesses of UB Group, including real estate, hospitality, education, and sports.')
+    return render_template('businesses.html', group_info=group_info, businesses=businesses, **meta)
 
 @app.route('/leadership')
 def leadership_page():
-    return render_template('leadership.html', group_info=group_info, leadership=leadership)
+    meta = get_meta_tags('Leadership', 'Meet the leaders of UB Group, who are dedicated to our vision of excellence and community.')
+    return render_template('leadership.html', group_info=group_info, leadership=leadership, **meta)
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', group_info=group_info, businesses=businesses)
+    meta = get_meta_tags('Contact Us', 'Get in touch with UB Group. We are here to answer your questions and inquiries.')
+    return render_template('contact.html', group_info=group_info, businesses=businesses, **meta)
 
 @app.route('/red-diamond-showcase')
 def red_diamond_showcase():
-    return render_template('red_diamond_showcase.html', group_info=group_info)
+    meta = get_meta_tags('Hotel Red Diamond', 'Experience premium hospitality at Hotel Red Diamond, a flagship hotel of UB Group.')
+    return render_template('red_diamond_showcase.html', group_info=group_info, **meta)
 
 @app.route('/ub-world-showcase')
 def ub_world_showcase():
-    return render_template('ub_world_showcase.html', group_info=group_info)
+    meta = get_meta_tags('UB World', 'Discover modern living at UB World, a premier real estate project by UB Group.')
+    return render_template('ub_world_showcase.html', group_info=group_info, **meta)
 
 @app.route('/school-showcase')
 def school_showcase():
-    return render_template('school_showcase.html', group_info=group_info)
+    meta = get_meta_tags('Chocolate Kids School', 'Nurturing young minds at Chocolate Kids School, an educational initiative of UB Group.')
+    return render_template('school_showcase.html', group_info=group_info, **meta)
 
 @app.route('/ub-farms-showcase')
 def ub_farms_showcase():
-    return render_template('ub_farms_showcase.html', group_info=group_info)
+    meta = get_meta_tags('UB Farms', 'Relax and unwind at UB Farms, a serene getaway for family and friends.')
+    return render_template('ub_farms_showcase.html', group_info=group_info, **meta)
 
 @app.route('/rising-star-turf-showcase')
 def rising_star_turf_showcase():
-    return render_template('rising_star_turf_showcase.html', group_info=group_info)
+    meta = get_meta_tags('Rising Star Turf', 'A professional cricket turf for players of all levels, part of UB Group\'s sports division.')
+    return render_template('rising_star_turf_showcase.html', group_info=group_info, **meta)
 
 @app.route('/red-diamond-sports-center-showcase')
 def red_diamond_sports_center_showcase():
-    return render_template('red_diamond_sports_center_showcase.html', group_info=group_info)
+    meta = get_meta_tags('Red Diamond Sports Center', 'A dedicated space for fitness, sports, and active living from UB Group.')
+    return render_template('red_diamond_sports_center_showcase.html', group_info=group_info, **meta)
 
 if __name__ == '__main__':
     app.run(debug=True)

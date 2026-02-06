@@ -2,7 +2,7 @@
 
 {% block title %}Our Businesses - UB GROUP{% endblock %}
 {% block meta_description %}
-    <meta name="description" content="Explore the diverse portfolio of businesses under UB Group, from hospitality and real estate to other innovative ventures.">
+    <meta name="description" content="UB Group Businesses - Explore our portfolio in Bilaspur: Hotel Red Diamond hospitality, UB World real estate, Chocolate Kids School education, sports facilities, and more services in Chhattisgarh.">
 {% endblock %}
 
 {% block og_title %}
@@ -11,6 +11,17 @@
 
 {% block og_description %}
 <meta property="og:description" content="Explore the diverse portfolio of businesses under UB Group, from hospitality and real estate to other innovative ventures.">
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Our Businesses</li>
+        </ol>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}

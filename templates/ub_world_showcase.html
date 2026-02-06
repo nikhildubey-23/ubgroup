@@ -3,7 +3,7 @@
 {% block title %}UB World Showcase - {{ group_info.name }}{% endblock %}
 
 {% block meta_description %}
-<meta name="description" content="Explore UB World's premium residential spaces through our curated image gallery. Discover modern living at its finest.">
+<meta name="description" content="UB World Bilaspur Gallery - Explore premium residential real estate in Chhattisgarh. View modern homes, apartments, and residential projects near Hotel Red Diamond, Bram Baba Road, Bilaspur.">
 {% endblock %}
 
 {% block og_title %}
@@ -13,6 +13,52 @@
 {% block og_description %}
 <meta property="og:description" content="Explore UB World's premium residential spaces through our curated image gallery. Discover modern living at its finest.">
 {% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="py-3">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('businesses_page') }}">Businesses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">UB World Gallery</li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+<!-- LocalBusiness Schema for UB World -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "UB World",
+    "description": "Modern real estate venture focused on creating thoughtfully designed residential spaces in Bilaspur, Chhattisgarh",
+    "url": "https://www.ubworld.co.in/",
+    "telephone": "+91 95750 15001",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Opp. Hotel Red Diamond, Bram Baba Road",
+        "addressLocality": "Bilaspur",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.0800",
+        "longitude": "82.1500"
+    },
+    "areaServed": {
+        "@type": "Place",
+        "name": "Bilaspur, Chhattisgarh"
+    },
+    "serviceType": "Residential Real Estate",
+    "containedInPlace": {
+        "@type": "Organization",
+        "name": "UB Group",
+        "url": "https://ubgroup.info"
+    }
+}
+</script>
 
 {% block content %}
 <!-- Hero Section -->
