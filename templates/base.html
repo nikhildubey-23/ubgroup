@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="{% block meta_description %}{{ meta_description or 'UB Group - Leading diversified conglomerate in Bilaspur, Chhattisgarh. Premier real estate, hospitality, education, and sports services serving the community with excellence.' }}{% endblock %}">
     <meta name="keywords" content="UB Group Bilaspur, Chhattisgarh real estate, hospitality Bilaspur, education Bilaspur, sports facilities, Hotel Red Diamond, UB World, Chocolate Kids School">
     <meta name="author" content="UB Group">
@@ -10,6 +10,8 @@
     <meta name="geo.region" content="IN-CT">
     <meta name="geo.placename" content="Bilaspur, Chhattisgarh, India">
     <meta name="ICBM" content="22.0800, 82.1500">
+    <!-- Google Search Console Verification - Replace with your actual verification code -->
+    <!-- <meta name="google-site-verification" content="your-verification-code-here"> -->
     <meta property="og:title" content="{% block og_title %}{{ og_title or 'UB Group' }}{% endblock %}">
     <meta property="og:description" content="{% block og_description %}{{ og_description or 'Leading diversified conglomerate in Bilaspur, Chhattisgarh offering real estate, hospitality, education, and sports services with commitment to excellence.' }}{% endblock %}">
     <meta property="og:image" content="{{ url_for('static', filename='img/ubgrouplogo.jpeg') }}">
@@ -19,10 +21,13 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="UB Group">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ubgroup">
+    <meta name="twitter:creator" content="@ubgroup">
     <meta name="twitter:title" content="{% block twitter_title %}{{ twitter_title or 'UB Group - Serving Bilaspur in Every Aspect' }}{% endblock %}">
     <meta name="twitter:description" content="{% block twitter_description %}{{ twitter_description or 'Leading diversified conglomerate in Bilaspur, Chhattisgarh offering real estate, hospitality, education, and sports services.' }}{% endblock %}">
     <meta name="twitter:image" content="{{ url_for('static', filename='img/ubgrouplogo.jpeg') }}">
-    <link rel="canonical" href="{{ request.url }}" />
+    <meta name="twitter:image:alt" content="UB Group Logo - Leading diversified conglomerate in Bilaspur, Chhattisgarh">
+    <link rel="canonical" href="{{ request.url.replace('https://ubgroup.info', 'https://www.ubgroup.info') }}" />
     <title>{% block title %}{{ title or group_info.name }}{% endblock %}</title>
     <link rel="icon" href="{{ url_for('static', filename='img/ubgrouplogo.jpeg') }}" type="image/x-icon">
 <!-- Minimal critical CSS for above-the-fold content -->
@@ -52,11 +57,13 @@
     <!-- Load only critical styles immediately, defer non-critical -->
     <link rel="preload" href="{{ url_for('static', filename='animations.css') }}" as="style" importance="low">
     
-    <!-- Bootstrap CSS - Load synchronously for proper styling -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Critical CSS - Load Bootstrap with high priority -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
     
-    <!-- Font Awesome - Load synchronously for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Load deferrend to reduce critical path -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Load animations CSS asynchronously -->
     <script>
@@ -73,14 +80,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
     <!-- Preconnect to critical origins to reduce connection latency -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
-    <!-- Optimize Google Fonts loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Optimize Google Fonts loading -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap"></noscript>
     

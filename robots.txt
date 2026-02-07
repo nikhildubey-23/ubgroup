@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.ubgroup.info/sitemap.xml
+
+# Block unnecessary files
+Disallow: /static/temp/
+Disallow: /static/cache/
+Disallow: /*.tmp$
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important static assets
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/img/
+
+# Block parameter-heavy URLs to prevent duplicate content
+Disallow: /*?*utm=
+Disallow: /*?*ref=
+Disallow: /*?*source=
